@@ -1,0 +1,234 @@
+// list-reset intended for reset all browser styles  
+list-reset 
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+
+// bnt-reset intended for reset button styles in browsers
+btn-reset 
+	padding: 0
+	border: none
+	background-color: transparent
+	cursor: pointer
+
+// connecting fonts
+
+@font-face 
+	font-family: 'Montserrat-Regular'
+	src: url('../fonts/Montserrat-Regular.woff') format('woff')
+	font-display: swap
+	font-weight: 400
+	font-style: normal
+
+@font-face 
+	font-family: 'Montserrat-ExtraBold'
+	src: url('../fonts/Montserrat-ExtraBold.woff') format('woff')
+	font-display: swap
+	font-weight: 700
+	font-style: normal
+
+
+
+//in this area begin styles for number find form
+.findNumbers
+	height: 374px
+	width: 380px
+	color: fff 
+	border: 1px solid rgba(0, 0, 0, 0.12)
+	box-sizing: border-box
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+	border-radius: 4px
+
+
+.fimdNumbers__title
+	font-family: Montserrat-ExtraBold
+	font-style: normal
+	font-weight: bold
+	font-size: 24px
+	line-height: 29px
+
+	// Dark 100% 
+
+	color: #1F2041
+
+//area of style guests arival and departure subtitlels	
+
+.findNumbers__subtitle--arrival,
+.findNumbers__subtitle--departure,
+.findNumbers__guests--subtitle,
+.pricingNumber__aboutOrder__guests--subtitle,
+.pricingNumber__aboutOrder--subtitle
+	width: 83px
+	height: 15px
+	font-family: Montserrat-ExtraBold
+	font-style: normal
+	font-weight: bold
+	font-size: 12px
+	line-height: 15px
+	// identical to box height 
+
+	text-transform: uppercase
+
+	// Dark 100% 
+
+	color: #1F2041
+
+
+.findNumbers__calendar,
+.pricingNumber__aboutOrder
+
+	display: flex
+	
+
+#start,
+#stop
+	width: 150px
+	height: 44px
+	background: #FFFFFF
+	
+	// Dark 75% 
+
+	border: 1px solid rgba(31, 32, 65, 0.25)
+	box-sizing: border-box
+	border-radius: 4px
+	font-family: Montserrat-Regular
+	font-size: 14px
+	line-height: 18px
+
+	// Dark 75% 
+
+	color: rgba(31, 32, 65, 0.75)
+
+.findNumbers__guests--select,
+.findNumbers__aboutOrder__guests--select
+
+	width: 320px
+	height: 44px
+
+	background: #FFFFFF
+	/* Dark 25% */
+
+	border: 1px solid rgba(31, 32, 65, 0.25)
+	box-sizing: border-box
+	border-radius: 4px
+
+
+.findNumbers__button,
+.findNumbers__aboutOrder__guests--button,
+.submitForm__button
+	
+	width: 320px
+	height: 44px
+	text-transform: uppercase
+	font-family: Montserrat-Regular
+	font-style: normal
+	font-weight: bold
+	font-size: 12px
+	line-height: 15px
+	color: #fff
+	/* identical to box height */
+
+	text-align: center
+	
+	
+	/* Primary Gradient */
+
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
+	border-radius: 22px
+	
+
+	.findNumbers__button--img
+		width: 20px
+		height: 20px
+		padding-left: 90%
+
+// area of prises of the numbers
+
+.pricingNumber__header,
+.pricingNumbers__tableSum,
+.pricingNumbers__tableCllection,
+.pricingNumbers__tableColleclionDop
+	display: flex
+	justify-content: space-between
+	
+
+.pricingNumber__numberOfticket
+	border: 1px solid black
+	display: inline-flex
+
+.pricingNumber__pricing
+	border: 1px solid black
+	display: inline-flex
+
+.pricingNumber
+	margin-top: 100px
+	height: 512px
+	width: 380px
+	color: fff 
+	border: 1px solid rgba(0, 0, 0, 0.12)
+	box-sizing: border-box
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+	border-radius: 4px
+
+
+// area of submit form
+
+.submitForm
+	margin-top: 100px
+	height: 358px
+	width: 380px
+	color: fff 
+	border: 1px solid rgba(0, 0, 0, 0.12)
+	box-sizing: border-box
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+	border-radius: 4px
+
+.submitForm__title	
+	width: 320px
+	height: 30px
+	font-family: Montserrat-Regular
+	font-weight: bold
+	font-size: 24px
+	line-height: 29px
+	color: #1F2041
+
+.submitForm__email,
+.submitForm__passwpord
+	width: 320px
+	height: 44px
+	background: #fff
+	border: 1px solid rgba(31, 32, 65, 0.25)
+	box-sizing: border-box
+	border-radius: 4px
+	
+
+.submitForm__footer
+	display: flex
+
+
+.submitForm__footer--subtitle
+	width: 164px
+	height: 18px
+	font-family: Montserrat-Regular
+	font-style: normal
+	font-weight: normal
+	font-size: 14px
+	line-height: 18px
+	color: #000
+
+.submitForm__footer--button
+	width: 62px
+	height: 15px
+	font-family: Montserrat-Regular
+	font-weight: bold
+	font-size: 12px
+	line-height: 15px
+	text-align: center
+	text-transform: uppercase
+	color: #BC9CFF
+	width: 99px
+	height: 44px
+	border-radius: 22px
+	background-color: #fff
+	border-color: #BC9CFF

@@ -1,0 +1,100 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Metalamp_task_2
+        link(rel="stylesheet", href="css/normalize.css")
+        link(rel="stylesheet", href="css/style.sass")
+    body 
+        // In this are begin find numbers section with date of arrival, depature and search button
+        div.findNumbers.container
+            h3.fimdNumbers__title Найдём номера под <br>  ваши желания
+            div.findNumbers__calendar
+                div.findNumbers__calendar--arrival
+                    label(for="start").findNumbers__subtitle--arrival прибытие
+                    button(type="submit",id="start", name="calendar-arrival", value="22.07.2021")
+                        img.findNumbers__button--img(src="./img/expand_more.svg", alt="")
+                div.findNumbers__calendar--departure
+                    label(for="stop").findNumbers__subtitle--departure выезд 
+                    button(type="submit",id="stop", name="calendar-departure", value="22.07.2021")
+                        img.findNumbers__button--img(src="./img/expand_more.svg", alt="")
+            div.findNumbers__guests
+                h2.findNumbers__guests--subtitle гости
+                select.findNumbers__guests--select(name="numberOfguests") 
+                    option(value="", selected= false)
+                    option(value="1", selected= true) 1
+                    option(value="2", selected= true) 2 
+            button(type="button", class="findNumbers__button", value="подобрать номер") подобрать номер 
+                img.findNumbers__button--img(src="./img/arrow_forward.svg", alt="")
+            // In this are end find numbers section with date of arrival, depature and search button
+
+
+            // In this are begin priсe numbers section with number of number arrival, 
+            // depature and pricing and booking button
+
+            div.pricingNumber.container
+                div.pricingNumber__header
+                    div.pricingNumber__numberOfticket
+                        h6.pricingNumber__numberOfticket--number №
+                        h4.pricingNumber__numberOfticket--mumberTicket 888
+                        h6.pricingNumber__numberOfticket--typeOfnumber люкс
+                    div.pricingNumber__pricing
+                        h5.pricingNumber__pricing--sum 9 900Р
+                        h6.pricingNumber__pricing--time за сутки
+                div.pricingNumber__aboutOrder
+                    div.pricingNumber__aboutOrder__Arrival
+                        label(for="start").pricingNumber__aboutOrder--subtitle прибытие
+                        button(type="submit", id="start", name="calendar-arrival", value="22.07.2021") 
+                            img.findNumbers__button--img(src="./img/expand_more.svg", alt="")
+                    div.pricingNumber__aboutOrder__Departure
+                        label(for="stop").pricingNumber__aboutOrder--subtitle убытие
+                        button(type="submit", id="stop", name="calendar-departure", value="22.07.2021") 
+                            img.findNumbers__button--img(src="./img/expand_more.svg", alt="")
+                div.pricingNumber__aboutOrder__guests
+                    h2.pricingNumber__aboutOrder__guests--subtitle гости
+                    select.findNumbers__aboutOrder__guests--select(name="numberOfguests") 
+                        option(value="", selected= false)
+                        option(value="1", selected= true) 1
+                        option(value="2", selected= true) 2 
+                div.pricingNumbres__table
+                    div.pricingNumbers__tableSum
+                        h5.pricingNumbers__tableSum--title 9900 за 4 суток
+                        h5.pricingNumbers__tableSum--subtitle 39 999Р
+                    div.pricingNumbers__tableCllection
+                        h5.pricingNumbers__tableCollection--title Сбор за услуги: скидка 2 179₽
+                        h5.pricingNumbers__tableCollection--subtitle 0P
+                    div.pricingNumbers__tableColleclionDop
+                        h5.pricingNumbers__tableColleclionDop--title Сбор за дополнительные услуги
+                        h5.pricingNumbers__tableColleclionDop--subtitle 300P
+                button(type="button", class="findNumbers__aboutOrder__guests--button", value="подобрать номер") забронировать 
+                    img.findNumbers__button--img(src="./img/arrow_forward.svg", alt="")
+                
+            // In this are begin form submit to website
+
+            div.submitForm.container
+                h2.submitForm__title Войти
+                input(type="email", class="submitForm__email", value="Email")
+                input(type="password", class="submitForm__passwpord", value="Пароль") 
+                button(type="button", class="submitForm__button", value="Enter") войти 
+                    img.findNumbers__button--img(src="./img/arrow_forward.svg", alt="")
+                div.submitForm__footer
+                    p.submitForm__footer--subtitle Нет аккаунта на Toxin?
+                    button(type="button", class="submitForm__footer--button", value="Создать") создать
+
+            // In this are begin form registration form
+
+            div.registrationForm 
+                h2.registrationForm__subtitle Регистрация аккаунта
+                input(type="text", class="registrationForm__name", value="Имя")
+
+                label(for="start")
+
+            mixin tab-header(name, id)
+                input(type='radio' name='tabs' id=id checked)
+                label(for=id) name
+            +tab-header('Monday', 'toggle-monday')
+            +tab-header('Tuesday', 'toggle-tuesday')
+            +tab-header('Wednesday', 'toggle-wednesday')
+            +tab-header('Thursday', 'toggle-thursday')
