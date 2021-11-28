@@ -238,3 +238,56 @@ btn-reset
 	width: 200px
 	height: 200px
 	color: white
+
+
+
+
+
+	.registrationForm_switchSlider
+	position: absolute
+	cursor: pointer
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: #ccc
+	-webkit-transition: .4s
+	transition: .4s
+	&:before
+		position: absolute
+		content: ""
+		height: 26px
+		width: 26px
+		left: 4px
+		bottom: 4px
+		background-color: white
+		-webkit-transition: .4s
+		transition: .4s
+		&:focus
+			color: black
+			width: 400px
+
+
+
+.registrationForm_switchForjoinButton
+	&:chacked 
+	.registrationForm_switchSlider
+		background-color: #2196F3
+
+.registrationForm_switchForjoinButton
+	&:chacked + 
+	.registrationForm_switchSlider
+		box-shadow: 0 0 1px #2196F3
+
+.registrationForm_switchForjoinButton
+	&:chacked + .registrationForm_switchSlider::before
+		-webkit-transform: translateX(26px)
+		-ms-transform: translateX(26px)
+		transform: translateX(26px)
+
+.registrationForm_switchSlider
+	border-radius: 34px
+
+.registrationForm_switchSlider
+	&:before
+		border-radius: 50%

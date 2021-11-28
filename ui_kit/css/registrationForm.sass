@@ -1,3 +1,10 @@
+$circle-slider: 30px
+$slider-container-width: 20px + $circle-slider
+$slider-conaoner-height: $circle-slider * 4
+
+
+
+
 // list-reset intended for reset all browser styles  
 .list-reset 
 	margin: 0
@@ -30,6 +37,8 @@
 
 
 .registrationForm
+	display: block
+	text-align: center
 	height: 646px
 	width: 380px
 	color: fff 
@@ -38,37 +47,89 @@
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
 	border-radius: 4px
 
+.registrationForm__subtitle
+	margin-top: 40px
+	margin-left: 30px
+	width: 320px
+	height: 30px
+	font-family: Montserrat-Regular
+	font-style: normal
+	font-weight: bold
+	font-size: 24px
+	line-height: 29px
+	/* identical to box height */
 
+	/* Dark 100% */
+
+	color: #1F2041
+
+registretionInputForms
+	width: 320px
+	height: 44px
+	background: #FFFFFF
+	border: 1px solid rgba(31, 32, 65, 0.25)
+	box-sizing: border-box
+	border-radius: 4px
 
 .registrationForm_switchForjoin
-	position: relative
-	display: inline-block
-	width: 80px
-	height: 30px
-	
+	display: flex
+	width: 100%
+	height: 300px
+	justify-content: center
+	align-items: center
+
 .registrationForm_switchForjoinButton
+	opacity: 0
 	display: none
-		
-
-.registrationForm_switchSlider
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	background-color: #ccc
-	-webkit-transition: .4s
-	transition: .4s
-	&::before
+	+ .registrationForm_switchSlider
+		position: relative
+		padding: 0
+		cursor: pointer
+	+ .registrationForm_switchSlider:before, + .registrationForm_switchSlider:after
 		position: absolute
-		content: ""
-		height: 26px
-		width: 26px
-		left: 4px
-		bottom: 4px
-		background-color: black
-		-webkit-transition: .4s
-		transition: .4s
+		content: ''
+		width: $circle-slider
+		height: $circle-slider
+	+ .registrationForm_switchSlider:before
+		top: -40px
+		left: $slider-conaoner-height * -1
+		width: $slider-conaoner-height
+		height: $slider-container-width
+		border-radius: 3em
+		border: 2px solid rgba(0, 0, 0, .1)
+		transition: background .75s
+	+ .registrationForm_switchSlider:after
+		background: #49DCB1
+		top: $circle-slider * -1 
+		left: -110px
+		border-radius: 50%
+		transition: left .5s
+		box-shadow: 0 .2em .2em rgba(0, 0, 0, .1)
+		border: 2px solid rgba(0, 0, 0, .1)
+	&:checked
+		+ .registrationForm_switchSlider:before
+			background:#49DCB1
+		+ .registrationForm_switchSlider:after
+			background: #49DCB1
+			border-radius: 50%
+			left: -40px		
 
-.registrationForm_switchForjoinButton
+.registrationForm_switchForjoin--pay
+	width: 320px
+	height: 44px
+	text-transform: uppercase
+	font-family: Montserrat-Regular
+	font-style: normal
+	font-weight: bold
+	font-size: 12px
+	line-height: 15px
+	color: #fff
+	/* identical to box height */
 
+	text-align: left
+	
+	
+	/* Primary Gradient */
 
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 
+	border-radius: 22px

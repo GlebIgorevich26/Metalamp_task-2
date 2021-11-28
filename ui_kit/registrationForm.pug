@@ -23,6 +23,9 @@ html(lang="en")
             label(for="registrationForm__registraion") данные для входа в сервис
             +registretionInputForms("email", "registrationForm__registraion--email", "Email")
             +registretionInputForms("email", "registrationForm__registraion--password", "Passord")
-            label.registrationForm_switchForjoin(for="checkbox")
-                input.registrationForm_switchForjoinButton(type="checkbox")
-                span.registrationForm_switchSlider 
+            .registrationForm_switchForjoin
+                input.registrationForm_switchForjoinButton(type="checkbox", id="slider")
+                label.registrationForm_switchSlider(for="slider")
+                p.registrationForm_switchForjoin--offer Получать спецпредложения
+            button(type="button", class="registrationForm_switchForjoin--pay btn-reset", value="") перейти к оплате 
+                    img.findNumbers__button--img(src="./img/arrow_forward.svg", alt="")
