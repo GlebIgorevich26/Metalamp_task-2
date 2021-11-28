@@ -88,13 +88,13 @@ html(lang="en")
             div.registrationForm 
                 h2.registrationForm__subtitle Регистрация аккаунта
                 input(type="text", class="registrationForm__name", value="Имя")
+ 
+    block content    
+        mixin labelforname(id, className, name)
+            label(for= ""+id, class= ""+className)=name   
+        mixin buttonforname(type, id, value, name)
+            button(type= ""+type, id= ""+id, value=""+value)=name
 
-                label(for="start")
-
-            mixin tab-header(name, id)
-                input(type='radio' name='tabs' id=id checked)
-                label(for=id) name
-            +tab-header('Monday', 'toggle-monday')
-            +tab-header('Tuesday', 'toggle-tuesday')
-            +tab-header('Wednesday', 'toggle-wednesday')
-            +tab-header('Thursday', 'toggle-thursday')
+        +labelforname("com", "labelform", "забронировать")
+        +buttonforname("submit", "com", "22.03.1100", "открыть")
+        

@@ -1,0 +1,74 @@
+// list-reset intended for reset all browser styles  
+.list-reset 
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+
+// bnt-reset intended for reset button styles in browsers
+.btn-reset 
+	padding: 0
+	border: none
+	background-color: transparent
+	cursor: pointer
+
+// connecting fonts
+
+@font-face 
+	font-family: 'Montserrat-Regular'
+	src: url('../fonts/Montserrat-Regular.woff') format('woff')
+	font-display: swap
+	font-weight: 400
+	font-style: normal
+
+@font-face 
+	font-family: 'Montserrat-ExtraBold'
+	src: url('../fonts/Montserrat-ExtraBold.woff') format('woff')
+	font-display: swap
+	font-weight: 700
+	font-style: normal
+
+
+.registrationForm
+	height: 646px
+	width: 380px
+	color: fff 
+	border: 1px solid rgba(0, 0, 0, 0.12)
+	box-sizing: border-box
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+	border-radius: 4px
+
+
+
+.registrationForm_switchForjoin
+	position: relative
+	display: inline-block
+	width: 80px
+	height: 30px
+	
+.registrationForm_switchForjoinButton
+	display: none
+		
+
+.registrationForm_switchSlider
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: #ccc
+	-webkit-transition: .4s
+	transition: .4s
+	&::before
+		position: absolute
+		content: ""
+		height: 26px
+		width: 26px
+		left: 4px
+		bottom: 4px
+		background-color: black
+		-webkit-transition: .4s
+		transition: .4s
+
+.registrationForm_switchForjoinButton
+
+
