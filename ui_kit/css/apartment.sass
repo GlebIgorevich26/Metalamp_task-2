@@ -1,0 +1,133 @@
+@font-face 
+	font-family: 'Montserrat-Regular'
+	src: url('../fonts/Montserrat-Regular.woff') format('woff')
+	font-display: swap
+	font-weight: 400
+	font-style: normal
+
+@font-face 
+	font-family: 'Montserrat-ExtraBold'
+	src: url('../fonts/Montserrat-ExtraBold.woff') format('woff')
+	font-display: swap
+	font-weight: 700
+	font-style: normal
+
+@font-face 
+	font-family: 'Quicksand-Regular'
+	src: url('../fonts/Quicksand-Regular.woff') format('woff')
+	font-display: swap
+	font-weight: 700
+	font-style: norma
+    
+.apartment 
+	width: 270px
+	height: 257px
+	background: #FFFFFF
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+	border-radius: 4px
+
+.apartment__info 
+	display: flex
+	justify-content: space-between
+
+.apartment__mention
+	display: flex
+	justify-content: space-between
+
+
+.apartment__info--number .numberOfaparture
+	width: 59px
+	height: 24px
+	font-family: Montserrat-Regular
+	font-weight: bold
+	font-size: 14px
+	line-height: 17px
+
+	/* Dark 100% */
+
+	color: #1F2041
+
+.apartment__info--number .view
+	font-family: Montserrat-Regular
+	font-weight: bold
+	font-size: 12px
+	line-height: 15px
+	/* identical to box height */
+
+	text-transform: uppercase
+
+	/* Primary Color */
+
+	color: #BC9CFF
+
+.apartment__info--price
+	margin: 0
+	font-family: Montserrat-Regular
+	font-style: normal
+	font-weight: bold
+	font-size: 14px
+	line-height: 18px
+	/* or 129% */
+	color: rgba(31, 32, 65, 0.5)
+
+.apartment__line
+	width: 230px
+	height: 1px
+	/* Dark 10% */
+	background: rgba(31, 32, 65, 0.1)
+
+// In this area begin star rating section
+
+.apartment__mention--star
+	display: inline-flex
+	flex-direction: row-reverse
+    
+
+
+.apartment__mention--star:not(:checked) > input
+	display: none
+
+.apartment__mention--star:not(:checked) > label
+	float: left
+	height: 24px
+	padding: 0
+	cursor: pointer
+	font-size: 24px
+	line-height: 24px
+	color: white
+	text-shadow: 1px 1px rgba(188, 156, 255, 1), -1px -1px rgba(188, 156, 255, 1)
+	
+
+
+.apartment__mention--star:not(:checked) > label:before
+	content: '★'
+
+
+.apartment__mention--star > input:checked ~ label
+	color: rgba(188, 156, 255, 1)
+	text-shadow: 1px 1px #c60
+
+
+.apartment__mention--star:not(:checked) > label:hover
+.apartment__mention--star:not(:checked) > label:hover ~label
+	color: rgba(188, 156, 255, 1)
+
+.apartment__mention--star > input:checked + label:hover
+.apartment__mention--star > input:checked + label:hover ~ label
+.apartment__mention--star > input:checked ~ label:hover
+.apartment__mention--star > input:checked ~ label:hover ~ label
+.apartment__mention--star > input:hover ~ input:checked ~ label
+	color: rgba(188, 156, 255, 1)
+	text-shadow: 1px 1px goldenrod
+
+.apartment__mention--star > label:active
+	position: relative
+
+
+.apartment__mention--numbersMention
+	margin: 0
+	font-family: Montserrat-Regular
+	font-style: normal
+	font-size: 14px
+	line-height: 18px
+	color: rgba(31, 32, 65, 0.5)

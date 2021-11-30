@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./css/apartment.sass")
+        link(rel="stylesheet", href="./css/normalize.css")
+        title Document
+    body 
+        .apartment 
+            img.apartment__logo(src="./img/room.png", alt="")
+            .apartment__info 
+                p.apartment__info--number 
+                    span.numberOfaparture № 888 
+                    span.view люкс
+                p.apartment__info--price 9 990 ₽ в сутки
+
+            hr.apartment__line
+
+            .apartment__mention 
+                .apartment__mention--star 
+                    mixin starRating(typeOf, idOf, name, valueOf)
+                        input(type =""+typeOf, id =""+idOf, name =""+nameOf, value =""+valueOf)
+                    mixin labelForStar(numberOf, titleOf)
+                        label(for =""+numberOf, title =""+titleOf)
+                    +starRating("radio", "star_5", "rating", "5")
+                    +labelForStar("star_5", "Оценка 5")
+                    +starRating("radio", "star_4", "rating", "4")
+                    +labelForStar("star_4", "Оценка 4")
+                    +starRating("radio", "star_3", "rating", "3")
+                    +labelForStar("star_3", "Оценка 3")
+                    +starRating("radio", "star_2", "rating", "2")
+                    +labelForStar("star_2", "Оценка 2")
+                    +starRating("radio", "star_1", "rating", "1")
+                    +labelForStar("star_1", "Оценка 1")
+                .apartment__mention--numbers
+                    p.apartment__mention--numbersMention 145 Отзывов
