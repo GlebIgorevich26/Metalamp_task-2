@@ -4,17 +4,30 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="./css/apartment.sass")
         link(rel="stylesheet", href="./css/normalize.css")
+        link(rel="stylesheet", href="./css/apartment.sass")
         title Document
-    body 
+    body.body 
         .apartment 
-            img.apartment__logo(src="./img/room.png", alt="")
+            .apartment__slider
+                button.prev__img(type= "button")
+                    img(src= "./img/prev.png")
+                .apartment__sleder--gallery
+                    div#listItems
+                button.next__img(type= "button")
+                    img(src="./img/next.png")
+                .apartment__slider--quantity
+                    span.apartment__slider--quantityRectangle#rectangle 
+                    span.apartment__slider--quantityRectangle#rectangle 
+                    span.apartment__slider--quantityRectangle#rectangle
+                    span.apartment__slider--quantityRectangle#rectangle
             .apartment__info 
                 p.apartment__info--number 
-                    span.numberOfaparture № 888 
+                    span.apartment__info--simbol №
+                    span.numberOfaparture 888 
                     span.view люкс
-                p.apartment__info--price 9 990 ₽ в сутки
+                p.apartment__info--price 9 990₽ 
+                    span.apartment__info--priceIn в сутки
 
             hr.apartment__line
 
@@ -36,3 +49,4 @@ html(lang="en")
                     +labelForStar("star_1", "Оценка 1")
                 .apartment__mention--numbers
                     p.apartment__mention--numbersMention 145 Отзывов
+    script(src="./js/apartment.js") 

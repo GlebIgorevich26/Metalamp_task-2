@@ -1,3 +1,7 @@
+$width__button: 44px
+$width__img: 270px
+$height__img: 150px
+	
 @font-face 
 	font-family: 'Montserrat-Regular'
 	src: url('../fonts/Montserrat-Regular.woff') format('woff')
@@ -18,13 +22,109 @@
 	font-display: swap
 	font-weight: 700
 	font-style: norma
-    
+
+.body
+	display: block
+	justify-content: center 
+	background-color: blue
+
 .apartment 
+	position: relative
 	width: 270px
 	height: 257px
 	background: #FFFFFF
 	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
 	border-radius: 4px
+
+.apartment__sleder--gallery
+	img
+		width: $width__img
+		height: $height__img
+		border-radius: 2% 2% 0 0
+
+.apartment__sleder--gallery
+	li:last-child
+		display: none
+
+.apartment__sleder--gallery
+	ul
+		padding: 0
+		margin: 0
+
+
+.apartment__slider
+	position: relative
+	overflow: hidden
+
+
+.apartment__slider
+	img
+		display: block
+
+
+.apartment__slider
+	li
+		list-style-type: none
+		display: inline-block
+
+#listItems
+	background-image: "./img/slider/room1.png"
+	content: ''
+	overflow: hidden
+	width: $width__img
+	height: $height__img
+	border-radius: 2% 2% 0 0 
+	transition: all 1s ease-out	
+
+.prev__img
+	position: absolute
+	top: $height__img / 2
+	left: 12px
+	width: $width__button
+	height: $height__img
+	top: 0
+	border: none
+	background-color: transparent
+
+.apartment__slider--quantityRectangle
+	display: inline
+	position: absolute
+	left: $width__img - 20px
+	top: $height__img - 21px
+	letter-spacing: 15px
+	width: 5px
+	height: 5px
+	border: 1px solid #fff
+	border-radius: 50%
+
+.apartment__slider--quantity
+	transition: all 1s ease-out
+
+.apartment__slider--quantity
+	:nth-child(1)
+		left: $width__img - 57px
+		background-color: #fff
+
+.apartment__slider--quantity
+	:nth-child(2)
+		left: $width__img - 45px
+
+.apartment__slider--quantity
+	:nth-child(3)
+		left: $width__img - 34px
+
+.apartment__slider--quantity
+	:nth-child(4)
+		left: $width__img - 23px
+
+.next__img
+	position: absolute
+	width: $width__button
+	height: $height__img
+	left: $width__img - 35px
+	top: 0
+	border: none
+	background-color: transparent
 
 .apartment__info 
 	display: flex
@@ -34,13 +134,31 @@
 	display: flex
 	justify-content: space-between
 
+.apartment__info--number
+	position: relative
+	top: 5px
+	left: 18px
 
-.apartment__info--number .numberOfaparture
+.apartment__info--simbol
 	width: 59px
 	height: 24px
 	font-family: Montserrat-Regular
 	font-weight: bold
 	font-size: 14px
+	line-height: 17px
+
+	/* Dark 100% */
+
+	color: #1F2041
+
+.apartment__info--number .numberOfaparture
+	position: relative
+	left: 5px
+	width: 59px
+	height: 24px
+	font-family: Montserrat-Regular
+	font-weight: bold
+	font-size: 20px
 	line-height: 17px
 
 	/* Dark 100% */
@@ -61,6 +179,9 @@
 	color: #BC9CFF
 
 .apartment__info--price
+	position: relative
+	top: 20px
+	left: -20px
 	margin: 0
 	font-family: Montserrat-Regular
 	font-style: normal
@@ -70,7 +191,22 @@
 	/* or 129% */
 	color: rgba(31, 32, 65, 0.5)
 
+.apartment__info--priceIn
+	margin: 0
+	font-family: Montserrat-Regular
+	font-style: normal
+	font-weight: bold
+	font-size: 12px
+	line-height: 18px
+	/* or 129% */
+	color: rgba(31, 32, 65, 0.5)
+
+
 .apartment__line
+	position: relative
+	left: 20px
+	margin: 0
+	padding: 0
 	width: 230px
 	height: 1px
 	/* Dark 10% */
@@ -79,9 +215,11 @@
 // In this area begin star rating section
 
 .apartment__mention--star
+	position: relative
 	display: inline-flex
 	flex-direction: row-reverse
-    
+	left: 20px
+	top: 6px
 
 
 .apartment__mention--star:not(:checked) > input
@@ -94,6 +232,7 @@
 	cursor: pointer
 	font-size: 24px
 	line-height: 24px
+	letter-spacing: 4px
 	color: white
 	text-shadow: 1px 1px rgba(188, 156, 255, 1), -1px -1px rgba(188, 156, 255, 1)
 	
@@ -125,6 +264,9 @@
 
 
 .apartment__mention--numbersMention
+	position: relative
+	top: 8px
+	left: -20px
 	margin: 0
 	font-family: Montserrat-Regular
 	font-style: normal
