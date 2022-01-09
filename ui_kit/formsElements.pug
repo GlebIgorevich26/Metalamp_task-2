@@ -1,0 +1,284 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./css/nouislider.css")
+        link(rel="stylesheet", href="./css/air-datepicker.css")
+        link(rel="stylesheet", href="./css/formElements.sass")
+        title FormElements
+    body 
+    h1 FormElements
+    .container
+    
+    // Colors and Types
+    .container__colorAndTypes
+        .container__colorAndTypes--container
+            .container__colorAndTypes--color
+            p.container__colorAndTypes--text Dark Shade 100% #1F2041
+        .container__colorAndTypes--container
+            .container__colorAndTypes--color
+            p.container__colorAndTypes--text Dark Shade 75% #1F2041
+        .container__colorAndTypes--container
+            .container__colorAndTypes--color
+            p.container__colorAndTypes--text Dark Shade 50% #1F2041
+        .container__colorAndTypes--container
+            .container__colorAndTypes--color
+            p.container__colorAndTypes--text Dark Shade 25% #1F2041
+        .container__colorAndTypes--container
+            .container__colorAndTypes--color
+            p.container__colorAndTypes--text Dark Shade 5% #1F2041
+        .container__colorAndTypes--container
+            .container__colorAndTypes--color
+            p.container__colorAndTypes--text Purple #BC9CFF
+        .container__colorAndTypes--container
+            .container__colorAndTypes--color
+            p.container__colorAndTypes--text Green #6FCF97
+
+    //email input element 
+    input.emailInput(type="text", value="email")
+    
+    //awesome iputelement
+    input.awesomeInput(type="text", value="This is pretty awersome")
+    
+    //dropdown guests
+    .dropdownSectionGuests
+        button.dropdownSectionGuests__button
+            .dropdownSectionGuests__button--text Сколько гостей
+            img.dropDown__button--icon(src='./img/expand_more.svg', alt="")
+        .dropdownSectionGuests__sectionWithDropdownContent
+            .dropdownSectionGuests__sectionWithDropdownContent--item
+                p.dropdownSectionGuests__sectionWithDropdownContent--text взрослые
+                span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+            .dropdownSectionGuests__sectionWithDropdownContent--item
+                p.dropdownSectionGuests__sectionWithDropdownContent--text дети 
+                span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+            .dropdownSectionGuests__sectionWithDropdownContent--item
+                p.dropdownSectionGuests__sectionWithDropdownContent--text младенцы
+                span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+            .dropdownSectionGuests__button__cleanApply 
+                .dropdownSectionGuests__button--clean(type="submit") Очистить
+                .dropdownSectionGuests__button--apply(type="submit") Применить 
+
+
+    //date field
+    .dateField 
+        input.dateFild__input(type="text", value="ДД.ММ.ГГГГ")
+    
+    //date calendar dropdown
+    .dropdown-date
+        .dropdown-date__wrapper
+            .dropdown-date__arrival
+                .dropdown-date__name Дата прибытия    
+                .dropdown-date__form
+                    input.dropdown-date__range.dropdown-date__range_from(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
+                    span.dropdown-date__arrow.dropdown-date__arrow_down
+             
+            .dropdown-date__departure
+                .dropdown-date__name Дата убытия
+                .dropdown-date__form
+                    input.dropdown-date__range.dropdown-date__range_to(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
+                    span.dropdown-date__arrow.dropdown-date__arrow_down
+    
+    
+    
+    //filter date dropdown
+    .filterDate 
+        input.filterDate-item(type="text", name="", placeholder="23 августа - 24 августа")
+        
+    
+    //subscription text fild
+    .subscribe
+        input.subscribeFild(type="email", placeholder='Email')
+        svg
+            linearGradient#gradient
+                stop.main-stop(offset="0%")
+                stop.alt-stop(offset="100%")
+            
+            path(d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#gradient)")
+        
+
+    
+    //dropdown choise fild
+    .dropdownSection
+        button.dropDown__button
+            .dropDown__button--text 2 спальни 2 кровати
+            img.dropDown__button--icon(src='./img/expand_more.svg', alt="")
+        .dropDown__sectionWithDropdownContent
+            .dropDown__sectionWithDropdownContent--item
+                p.dropDown__sectionWithDropdownContent--text спальни 
+                span.dropDown__sectionWithDropdownContent--RectatangleMinus -
+                .dropDown__sectionWithDropdownContent--Number 0
+                span.dropDown__sectionWithDropdownContent--RectatanglePlus +
+            .dropDown__sectionWithDropdownContent--item
+                p.dropDown__sectionWithDropdownContent--text кровати 
+                span.dropDown__sectionWithDropdownContent--RectatangleMinus -
+                .dropDown__sectionWithDropdownContent--Number 0
+                span.dropDown__sectionWithDropdownContent--RectatanglePlus +
+            .dropDown__sectionWithDropdownContent--item
+                p.dropDown__sectionWithDropdownContent--text ванные комнаты 
+                span.dropDown__sectionWithDropdownContent--RectatangleMinus -
+                .dropDown__sectionWithDropdownContent--Number 0
+                span.dropDown__sectionWithDropdownContent--RectatanglePlus +
+            .dropdownSectionGuests__button__cleanApplyItem
+                .dropdownSectionGuests__button--cleanItem(type="submit") Очистить
+                .dropdownSectionGuests__button--applyItem(type="submit") Применить
+
+    // Checkbox choise field 
+    .choiseCheckbox 
+        button.choiseCheckbox__button(type="submit", value="") Развернуть список
+            img(src="./img/expand_more.svg", alt="dropdovn")
+        .choicseListOfCheckBoxes
+            .choicseListOfCheckBoxes__list
+                input#choiseCheckbox__item0.choicseListOfCheckBoxes__item(type="checkbox")
+                label(for="choiseCheckbox__item0") Завтрак
+            .choicseListOfCheckBoxes__list
+                input#choiseCheckbox__item1.choicseListOfCheckBoxes__item(type="checkbox")
+                label(for="choiseCheckbox__item1") Письменный стол
+            .choicseListOfCheckBoxes__list
+                input#choiseCheckbox__item2.choicseListOfCheckBoxes__item(type="checkbox")
+                label(for="choiseCheckbox__item2") Стул для кормления
+            .choicseListOfCheckBoxes__list
+                input#choiseCheckbox__item3.choicseListOfCheckBoxes__item(type="checkbox")
+                label(for="choiseCheckbox__item3") Кроватка
+            .choicseListOfCheckBoxes__list
+                input#choiseCheckbox__item4.choicseListOfCheckBoxes__item(type="checkbox")
+                label(for="choiseCheckbox__item4") Телевизор
+            .choicseListOfCheckBoxes__list
+                input#choiseCheckbox__item5.choicseListOfCheckBoxes__item(type="checkbox")
+                label(for="choiseCheckbox__item5") Шампунь
+
+        
+    // Range slider   
+    .slider__content
+        p.slider__text Диапазон цен
+        .slider__inputs
+            label(for="slider__input--first")
+                input#slider__input--first(type="text", name="", placeholder="")
+                span ₽
+            span -
+            label(for="slider__input--second")
+                input#slider__input--second(type="text", name="", placeholder="")    
+                span ₽
+    #slider
+
+    //pagination
+    .pagination
+        ul.pagination__list
+            li.pagination__list--item
+                a(href="#") 1
+            li.pagination__list--item
+                a(href="#") 2
+            li.pagination__list--item
+                a(href="#") 3
+            li.pagination__list--item
+                a(href="#") ...
+            li.pagination__list--item
+                a(href="#") 50
+        .pagination__button
+            span
+                svg
+                    path(width="40" height="40" d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z" fill="white")
+    .pagination__text 
+        p 1 – 12 из 100+ вариантов аренды               
+            
+    // comfort and convenience
+    .descriptionServices
+        .descriptionServices__Item
+            .descriptionServices__comfortImg
+                img(src="./img/emoticon.svg", alt="")
+            .descriptionServices__text
+                p.descriptionServices__descr Комфорт 
+                p.descriptionServices__subdescr Шумопоглощающие стены
+        hr.descriptionServices__line
+        .descriptionServices__Item
+            .descriptionServices__comfortImg
+                img(src="./img/city.svg", alt="")
+            .descriptionServices__text
+                p.descriptionServices__descr Удобство 
+                p.descriptionServices__subdescr Окно в каждой из спален
+        hr.descriptionServices__line
+    
+    //checkbox section 
+    .choicseListOfCheckBoxes__items
+        .choicseListOfCheckBoxes__list
+            input#choiseCheckbox__item--Smoke.choicseListOfCheckBoxes__item(type="checkbox")
+            label(for="choiseCheckbox__item--Smoke") Можно курить
+        .choicseListOfCheckBoxes__list
+            input#choiseCheckbox__item--Pets.choicseListOfCheckBoxes__item(type="checkbox")
+            label(for="choiseCheckbox__item--Pets") Можно с питомцами
+        .choicseListOfCheckBoxes__list
+            input#choiseCheckbox__item--Guests.choicseListOfCheckBoxes__item(type="checkbox")
+            label(for="choiseCheckbox__item--Guests") Можно пригласить гостей (до 10 человек)
+
+    //radio cohise button men women
+    .choiceRadioItems
+        .choiceRadioItem__item
+            input#men.custom__radiobutton(type="radio")
+            label(for="men") Мужчина
+        .choiceRadioItem__item
+            input#women.custom__radiobutton(type="radio")
+            label(for="women") Женщина
+
+    //choise toogle
+    .choiseButton__toogle
+        input#choiseButton__toogle--first(type="checkbox")
+        label(for="choiseButton__toogle--first") 
+        input#choiseButton__toogle--second(type="checkbox")
+        label(for="choiseButton__toogle--first")
+        span#choiseSpan__toogle
+
+    //like button 
+    .likeButton__choiseBox 
+        input.likeButton__choiseBox--choise(type="checkbox")
+        .likeButton__choiseBox--images 
+            img.like__unactive(src="./img/likeUnActive.svg", alt="")
+            img.like__active(src="./img/likeActive.svg", alt="")
+        .likeButton__choiseBox--count 0
+
+    //rich checkbox item
+    .richCheckBox__section 
+        .richCheckBox__section--item 
+            input#richCheckBox__section--checkBoxFirst(type="checkbox")
+            label(for="richCheckBox__section--checkBoxFirst") Широкий коридор
+            p Ширина коридоров в номере не менее 91 см.
+        .richCheckBox__section--item 
+            input#richCheckBox__section--checkBoxSecond(type="checkbox")
+            label(for="richCheckBox__section--checkBoxSecond") Помощник для инвалидов
+            p На&nbsp;1&nbsp;этаже вас встретит специалист и&nbsp;проводит до&nbsp;номера.
+
+
+    //bullet list
+    .bulletList 
+        ul.bulletList--items 
+            li.bulletList--item Нельзя с питомцами
+            li.bulletList--item Без вечеринок и мероприятий
+            li.bulletList--item Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00
+
+
+    //comment section
+    .comment 
+        
+            
+
+
+
+
+    script(src="./js/jquery.js")
+    script(src="./js/air-datepicker.js") 
+    script(src="./js/nouislider.js") 
+    script(src="./js/formElements.js") 
+    script(src="./js/slider.js") 
+    script(src="./js/calendar.js") 
+    
+    
+        
+    
+

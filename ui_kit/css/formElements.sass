@@ -1,0 +1,826 @@
+$circle-slider: 30px
+$slider-container-width: 20px + $circle-slider
+$slider-conaoner-height: $circle-slider * 4
+    
+    
+@font-face 
+    font-family: 'Montserrat-Regular'
+    src: url('../fonts/Montserrat-Regular.woff') format('woff')
+    font-display: swap
+    font-weight: 400
+    font-style: normal
+
+@font-face 
+    font-family: 'Montserrat-ExtraBold'
+    src: url('../fonts/Montserrat-ExtraBold.woff') format('woff')
+    font-display: swap
+    font-weight: 700
+    font-style: normal
+
+@font-face 
+    font-family: 'Quicksand-Regular'
+    src: url('../fonts/Quicksand-Regular.woff') format('woff')
+    font-display: swap
+    font-weight: 700
+    font-style: norma
+    
+    
+@mixin allStrings
+    width: 266px
+    height: 44px 
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.5)
+    box-sizing: border-box
+    border-radius: 2px 
+
+@mixin fontFace
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.25)
+     
+  
+body 
+    //background-image: url("../img/sky.jpg")
+
+// Colors and Types
+.container__colorAndTypes--container
+    display: flex
+    justify-content: start
+    margin-top: 10px
+
+.container__colorAndTypes--color
+    width: 70px
+    height: 70px
+    border-radius: 6px
+
+.container__colorAndTypes--text
+    margin-left: 10px
+
+.container,
+.choiseField,
+.calendarDropdown__item
+    position: relative
+    display: inline-flex
+    flex-direction: column
+
+.choiseFieldInformation,
+.choiseCheckbox__list
+    display: inline-flex
+    flex-direction: row
+
+//styling Email input
+.emailInput
+    @include fontFace
+    margin-top: 10px
+    padding-left: 10%
+    width: 320px
+    height: 44px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+
+//styling awesome iputelement
+.awesomeInput
+    @include fontFace
+    padding-left: 10%
+    width: 320px
+    height: 44px
+    left: 141px
+    top: 247.44px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.5)
+    box-sizing: border-box
+    border-radius: 4px
+
+// Dropdown section with choise of guests
+
+.dropdownSectionGuests  
+    margin-top: 20px
+    @include allStrings
+    position: relative
+    border: none
+
+.dropdownSectionGuests__button
+    @include allStrings
+    width: 320px
+    height: 44px
+    display: flex
+    justify-content: space-around
+
+.dropdownSectionGuests__button--text
+    @include fontFace 
+    margin: 0
+    padding-top: 3%
+      
+.dropDown__button--icon
+    padding: 0
+    margin: 0
+    width: 15px
+    padding-top: 5%
+    padding-left: 50%
+
+
+.dropdownSectionGuests__sectionWithDropdownContent
+    position: absolute
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    margin-top: -170px
+    margin-left: 0
+    @include allStrings
+    display: grid
+    background-color: #fff
+    width: 320px
+    height: auto
+    overflow: hidden
+    display: none
+   
+
+.dropdownSectionGuests__sectionWithDropdownContent--item
+    display: flex
+    justify-content: space-between
+    padding: 5px 15px
+    
+
+
+.dropdownSectionGuests__sectionWithDropdownContent--item p
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #1F2041
+    flex: 1
+    margin: 0
+    margin-top: 5%
+
+
+.dropdownSectionGuests__sectionWithDropdownContent--item span 
+    margin: 0
+    margin-top: 2.5%
+    width: 30px
+    height: 30px
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 22px
+    text-align: center
+    padding-top: 2.5%
+    
+.dropdownSectionGuests__sectionWithDropdownContent--Number
+    width: 20px
+    height: 20px
+    text-align: center
+    padding-top: 5%  
+
+.dropdownSectionGuests__button__cleanApply
+    display: flex
+    justify-content: space-between
+
+.dropdownSectionGuests__button--clean,
+.dropdownSectionGuests__button--apply
+    padding: 15px
+    background-color: #fff
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    text-transform: uppercase
+    color: #BC9CFF
+
+//styling date element
+.dateField
+    margin-top: 40px
+    width: 320px
+    height: 44px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+
+
+.dateFild__input
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-size: 12px
+    line-height: 15px
+    border: none
+    padding: 0
+    margin: 0
+    padding-top: 5%
+    padding-left: 15%
+
+//styling date arrive and date departure
+.dropdown-date__wrapper
+    margin-top: 20px
+    display: flex
+    justify-self: start
+
+.dropdown-date__range
+    border: none
+
+.dropdown-date__name
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #1F2041
+    
+.dropdown-date__range
+    width: 150px
+    height: 44px
+    background-image: url("../img/expand_more.svg")
+    background-repeat: no-repeat
+    background-size: 12px 12px
+    background-position: 95% 50%
+    font-size: 14px
+    line-height: 24px
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    background-color: #fff
+
+    
+//styling date section
+.filterDate-item
+    margin-top: 20px
+    width: 320px
+    height: 44px
+    background-image: url("../img/expand_more.svg")
+    background-repeat: no-repeat
+    background-size: 12px 12px
+    background-position: 95% 50%
+    font-size: 14px
+    line-height: 24px
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    background-color: #fff
+
+//subscribe Email section
+.subscribe
+    margin-top: 10px
+    position: relative
+    width: 267px
+    height: 44px 
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+
+.subscribeFild
+    top: 15px
+    left: 20px
+    position: absolute
+    border: none
+
+.subscribe
+    svg
+        position: absolute
+        left: 80%
+        top: 15px
+        width: 24px
+        height: 24px
+.subscribe
+    path
+        width: 24px
+        height: 24px
+
+.main-stop
+    stop-color: #BC9CFF 
+.alt-stop
+    stop-color: #8BA4F9
+
+        
+
+// Dropdown section with checkboxes
+
+.choiseCheckbox
+    margin-top: 200px
+    position: relative
+
+.choiseCheckbox__button
+    font-family: Montserrat
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #1F2041
+    border: none
+    background: none
+    padding: 0
+    margin: 0
+    display: flex
+    justify-content: space-between
+    width: 266px
+    height: auto
+    padding-left: 1%
+
+.choicseListOfCheckBoxes__item
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.choicseListOfCheckBoxes__item+label
+    display: inline-flex
+    align-items: center
+    user-select: none
+
+
+.choicseListOfCheckBoxes__item+label::before
+    content: ''
+    display: inline-block
+    width: 1em
+    height: 1em
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    margin-right: 0.5em
+
+    background-size: 50% 50%
+
+.choicseListOfCheckBoxes__item:checked+label::before
+    background: #FFFFFF
+    border: 1px solid #BC9CFF
+    box-sizing: border-box
+    border-radius: 4px
+    background-image: url("../img/v.svg")
+    background-repeat: no-repeat
+    background-position: center
+
+
+.choicseListOfCheckBoxes__list
+    label
+        font-family: Montserrat
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 18px
+        color: rgba(31, 32, 65, 0.5)
+
+
+.choiseCheckbox__button img
+    display: block
+    width: 16px
+    height: 16px
+    padding-right: 1.3rem
+
+
+.choicseListOfCheckBoxes
+    margin-left: 5px
+    position: absolute
+    margin-top: -130px
+    display: none
+
+    
+// Dropdown section with elements  beds, rooms  
+
+.dropdownSection
+    margin-top: 10px
+    @include allStrings
+    position: relative
+    border: none
+    
+.dropDown__button
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+    @include allStrings
+    width: 266px
+    height: 44px
+    display: flex
+    justify-content: space-around
+
+.dropDown__button--text
+    margin: 0
+    padding-top: 5%
+      
+.dropDown__button--icon
+    padding: 0
+    margin: 0
+    width: 15px
+    padding-top: 5%
+    padding-left: 20%
+
+
+.dropDown__sectionWithDropdownContent
+    position: absolute
+    margin-top: -170px
+    margin-left: 0
+    @include allStrings
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    display: grid
+    background-color: #fff
+    width: 266px
+    height: auto
+    overflow: hidden
+    display: none
+    text-transform: uppercase
+   
+
+.dropDown__sectionWithDropdownContent--item
+    display: flex
+    justify-content: space-between
+    padding: 5px 15px
+    
+
+.dropDown__sectionWithDropdownContent--item p
+    flex: 1
+    margin: 0
+    margin-top: 5%
+
+
+.dropDown__sectionWithDropdownContent--item span 
+    margin: 0
+    margin-top: 2.5%
+    width: 30px
+    height: 30px
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 22px
+    text-align: center
+    padding-top: 2.5%
+    
+.dropDown__sectionWithDropdownContent--Number
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    width: 20px
+    height: 20px
+    text-align: center
+    padding-top: 5%  
+    
+.dropdownSectionGuests__button__cleanApplyItem
+    display: flex
+    justify-content: space-between
+
+.dropdownSectionGuests__button--cleanItem,
+.dropdownSectionGuests__button--applyItem
+    padding: 15px
+    background-color: #fff
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    text-transform: uppercase
+    color: #BC9CFF
+
+
+// Styling inputs for slyder range
+
+
+.slider__content
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    margin-top: 150px
+    display: flex
+    justify-content: space-between
+    width: 266px
+    height: auto
+    margin-bottom: 10px
+    text-transform: uppercase
+    color: #1F2041
+    font-size: 12px
+    line-height: 15px
+
+    
+.slider__inputs
+    span
+        font-family: 'Montserrat-Regular'
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+        text-transform: uppercase
+        color: rgba(31, 32, 65, 0.5)
+
+.slider__text
+    display: block
+    margin: 0
+    padding: 0
+
+
+#slider__input--first,
+#slider__input--second
+    width: 30px
+    height: auto
+    border: none
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    text-align: right
+    text-transform: uppercase
+    color: rgba(31, 32, 65, 0.5)
+    font-size: 12px
+
+
+//Slider range styling
+.noUi-connect
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+
+.noUi-touch-area
+    width: 12px
+    height: 12px
+    border-radius: 100% 
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+
+.noUi-handle
+    border: 1px solid white
+    border-radius: 100%
+    background: #FFF
+    cursor: default
+    box-shadow: none
+
+.noUi-handle:before, 
+.noUi-handle:after
+    display: none
+
+.noUi-target
+    Width: 266px
+    Height: 6px
+
+.noUi-horizontal .noUi-handle
+    width: 13px
+    height: 13px
+    right: -5px
+    top: -5px
+
+.noUi-horizontal .noUi-handle
+    :first-child
+        border-right: 1px solid white
+
+
+/* pagination */
+.pagination
+    width: 230px
+    margin-top: 40px
+    display: flex
+    justify-content: space-between
+
+
+.pagination__list 
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: space-between
+    
+.pagination__list--item 
+    list-style-type: none
+
+.pagination__list--item a
+    text-decoration: none
+
+.pagination__list--item:first-child 
+    position: relative
+    display: block
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 100%
+    width: 40px
+    height: 40px
+   
+.pagination__list--item:first-child a
+    color: white
+    display: block
+    padding-top: 10px
+    padding-left: 15px
+    text-decoration: none
+
+.pagination__list--item:not(:first-child) a
+    position: absolute
+    display: block
+    padding-top: 10px
+    left: 18%
+    color: rgba(31, 32, 65, 0.5)
+
+.pagination__list--item:nth-child(3) a
+    left: 25%
+.pagination__list--item:nth-child(4) a
+    left: 35%
+.pagination__list--item:nth-child(5) a
+    left: 48%
+
+.pagination__button span
+    
+    display: block
+    position: relative
+    width: 40px
+    height: 40px
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    border-radius: 22px
+
+.pagination__button span svg
+    position: absolute
+    width: 20px
+    height: 20px
+    top: 12px
+    left: 10px
+
+.pagination__text
+    width: 229px
+    height: 24px
+.pagination__text p
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    color: rgba(31, 32, 65, 0.75)
+
+
+// comfort and convenience
+.descriptionServices__Item
+    margin: 20px 0
+    display: flex
+    justify-content: start
+
+.descriptionServices__comfortImg
+    width: 48px
+    height: 48px
+
+.descriptionServices__descr
+    display: block
+    padding: 0
+    margin: 0
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+.descriptionServices__subdescr
+    display: block
+    padding: 0
+    margin: 0
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+.descriptionServices__line
+    margin: 0
+    padding: 0
+    border: none
+    width: 280px
+    height: 1px
+    background: rgba(31, 32, 65, 0.1)
+
+// checkbox section smoke and other
+
+.choicseListOfCheckBoxes__items
+    margin-top: 20px
+
+// radio buttons choice
+
+.choiceRadioItems
+    margin-top: 40px
+    display: flex
+    justify-content: start
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    color: rgba(31, 32, 65, 0.75)
+
+.custom__radiobutton 
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.custom__radiobutton+label 
+    display: inline-flex
+    align-items: center
+    user-select: none
+
+
+.custom__radiobutton+label::before 
+    content: ''
+    display: inline-block
+    width: 20px
+    height: 20px
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    border-radius: 50%
+    margin-right: 0.5em
+    background-repeat: no-repeat
+    background-position-x: 45%
+    background-position-y: 45%
+   
+
+.custom__radiobutton:checked+label::before
+    border: 1px solid #BC9CFF
+    background-image: url("../img/rec.svg")
+    color: rgba(31, 32, 65, 0.75)
+
+
+//custom join toogle
+.choiseButton__toogle
+    position: relative
+    width: 40px
+    height: 20px
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    border-radius: 10px
+    margin-top: 40px
+    display: flex
+    justify-content: start
+
+#choiseSpan__toogle
+    top: 2.5px
+    left: 2px
+    display: block
+    position: absolute
+    width: 15px
+    height: 15px
+    border-radius: 100%
+    background: rgba(31, 32, 65, 0.25)
+
+#choiseButton__toogle--first,
+#choiseButton__toogle--second
+    margin: 0
+    padding: 0
+    width: 40px
+    height: 20px
+    opacity: 0
+
+
+//like button  
+.likeButton__choiseBox
+    margin-top: 40px
+    display: flex
+    justify-content: start
+    position: relative
+    width: 40px
+    height: 20px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 10px
+
+.like__unactive,
+.like__active
+    display: block
+    width: 10px
+    height: 10px
+    position: absolute
+    top: 5px
+    left: 4px
+
+.like__active
+    opacity: 0
+
+.likeButton__choiseBox--choise
+    z-index: 3
+    margin: 0
+    padding: 0
+    width: 50px
+    height: 20px
+    opacity: 0
+    
+.likeButton__choiseBox--count
+    position: absolute
+    top: 3px
+    left: 22px
+    font-family: 'Montserrat-Regular'
+    font-size: 10px
+    line-height: 12px
+    color: rgba(31, 32, 65, 0.25)
+
+
+//rich choiseBox section
+.richCheckBox__section
+    width: 266px
+    height: 145px
+.richCheckBox__section--item p
+    font-family: 'Montserrat-Regular'
+    font-size: 12px
+    line-height: 14px
+    color: rgba(31, 32, 65, 0.5)
+
+.richCheckBox__section--item label
+    font-weight: bold
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.75)
+
+//bullet list
+.bulletList--items
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+    list-style-image: url('../img/el.svg')
