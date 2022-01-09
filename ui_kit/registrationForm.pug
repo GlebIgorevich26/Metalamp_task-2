@@ -13,6 +13,8 @@ html(lang="en")
                 input(type= ""+typeOfinput, class= ""+classofInput, value= ""+valueOfInput, check= ""+checkIn, name= ""+nameIn)
             +registretionInputForms("text", "registrationForm__name", "Имя")
             +registretionInputForms("text", "registrationForm__surname", "Фамилия")
+
+
             .registrationForm__radioButton
                 +registretionInputForms("radio", "registrationForm__radioMan", "", true, "generalFiorm")
                 label(for="registrationForm__radioMan") Мужчина
@@ -23,9 +25,12 @@ html(lang="en")
             label(for="registrationForm__registraion") данные для входа в сервис
             +registretionInputForms("email", "registrationForm__registraion--email", "Email")
             +registretionInputForms("email", "registrationForm__registraion--password", "Passord")
+
+            
             .registrationForm_switchForjoin
                 input.registrationForm_switchForjoinButton(type="checkbox", id="slider")
                 label.registrationForm_switchSlider(for="slider")
                 p.registrationForm_switchForjoin--offer Получать спецпредложения
+
             button(type="button", class="registrationForm_switchForjoin--pay btn-reset", value="") перейти к оплате 
                     img.findNumbers__button--img(src="./img/arrow_forward.svg", alt="")
