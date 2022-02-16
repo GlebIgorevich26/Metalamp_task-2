@@ -1,0 +1,254 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/air-datepicker.css")
+        link(rel="stylesheet", href="css/normalize.css")
+        link(rel="stylesheet", href="css/nouislider.css")
+        link(rel="stylesheet", href="css/landing.sass")
+        title Metalamp
+    body 
+        //**********First page*************
+        //Header without person
+        .header__container--general
+            .header__container 
+                img.header__logo(src="./img_website/logo.svg", alt="")
+                .header__list--container
+                    ul.header__list 
+                        li.header__list--item О нас
+                        li.header__list--item Услуги
+                            img(src="./img_website/expand_more.svg", alt="")
+                        li.header__list--item Вакансии
+                        li.header__list--item Новости
+                        li.header__list--item Соглашения
+                            img(src="./img_website/expand_more.svg", alt="")
+                .signIn__button--container
+                    .signIn__button 
+                        p войти
+                .registration__button 
+                    p зарегестрироваться 
+        //image container with background image
+        .container__img 
+        
+        
+        //container with depature and arivel with poeple
+        .room__numbers--container 
+            p.room__numbers--title Найдем номера под ваши пожелания
+            //date calendar dropdown
+            .dropdown-date
+                .dropdown-date__wrapper
+                    .dropdown-date__arrival
+                        .dropdown-date__name прибытие   
+                        .dropdown-date__form
+                            input.dropdown-date__range.dropdown-date__range_from(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
+                            span.dropdown-date__arrow.dropdown-date__arrow_down
+                    
+                    .dropdown-date__departure
+                        .dropdown-date__name выезд
+                        .dropdown-date__form
+                            input.dropdown-date__range.dropdown-date__range_to(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
+                            span.dropdown-date__arrow.dropdown-date__arrow_down
+            //dropdown guests
+            .dropdownSectionGuests
+                p гости
+                button.dropdownSectionGuests__button
+                    .dropdownSectionGuests__button--text 3 Гостя
+                    img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
+                .dropdownSectionGuests__sectionWithDropdownContent
+                    .dropdownSectionGuests__sectionWithDropdownContent--item
+                        p.dropdownSectionGuests__sectionWithDropdownContent--text взрослые
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                        .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                    .dropdownSectionGuests__sectionWithDropdownContent--item
+                        p.dropdownSectionGuests__sectionWithDropdownContent--text дети 
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                        .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                    .dropdownSectionGuests__sectionWithDropdownContent--item
+                        p.dropdownSectionGuests__sectionWithDropdownContent--text младенцы
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                        .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                    .dropdownSectionGuests__button__cleanApply 
+                        .dropdownSectionGuests__button--clean(type="submit") Очистить
+                        .dropdownSectionGuests__button--apply(type="submit") Применить 
+            //pick up button
+            .pickUp__button--container 
+                p подобрать номер
+                img(src="./img_website/arrow_forward.svg", alt="")
+        //footer 
+        .footer__container 
+            .footer__logo 
+                img.header__logo(src="./img_website/logo.svg", alt="")
+                p.heder__description Бронирование номеров в&nbsp;лучшем отеле 2019 года по&nbsp;версии ассоциации &laquo;Отельные взгляды&raquo;
+            .footer__list--container 
+                ul.footer__list
+                    li.footer__list--item Навигация
+                    li.footer__list--item О нас
+                    li.footer__list--item Новости
+                    li.footer__list--item Служба поддержки
+                    li.footer__list--item Услуги
+                ul.footer__list
+                    li.footer__list--item О нас
+                    li.footer__list--item О сервисе
+                    li.footer__list--item Наша команда
+                    li.footer__list--item Вакансии
+                    li.footer__list--item Инвесторы
+                ul.footer__list
+                    li.footer__list--item Служба поддержки
+                    li.footer__list--item Согашения
+                    li.footer__list--item Сообщества
+                    li.footer__list--item Связь с нами
+            .footer__subscription
+                p.footer__subscription--title подписка
+                p.footer__subscription--description Получайте специальные предложения и новости сервиса
+                .email__button 
+                    p Email 
+                    img(src="./img_website/arrow_forward.svg", alt="")
+        .footer__container--copyriting
+            .copyriting
+                p Copyright © 2018 Toxin отель. Все права защищены.
+            .footer__links 
+                a.footer__links--item(href="#")
+                    img(src="./img_website/tw.svg", alt="") 
+                a.footer__links--item(href="#")
+                    img(src="./img_website/fb.svg", alt="") 
+                a.footer__links--item(href="#")
+                    img(src="./img_website/inst.svg", alt="") 
+
+
+
+        //***********Second page************
+        .page__delimiter
+        //Header without person
+        .header__container--general
+            .header__container 
+                img.header__logo(src="./img_website/logo.svg", alt="")
+                .header__list--container
+                    ul.header__list 
+                        li.header__list--item О нас
+                        li.header__list--item Услуги
+                            img(src="./img_website/expand_more.svg", alt="")
+                        li.header__list--item Вакансии
+                        li.header__list--item Новости
+                        li.header__list--item Соглашения
+                            img(src="./img_website/expand_more.svg", alt="")
+                .signIn__button--container
+                    .signIn__button 
+                        p войти
+                .registration__button 
+                    p зарегестрироваться 
+
+        //content container
+        .conteiner__general
+            .container__nav--left 
+                p.arrival__title даты пребывания в отеле
+                //filter date dropdown
+                .filterDate 
+                    input.filterDate-item(type="text", name="", placeholder="23 августа - 24 августа")
+                //dropdown guests
+            .dropdownSectionGuests__second
+                p гости
+                button.dropdownSectionGuests__button
+                    .dropdownSectionGuests__button--text 3 Гостя, 1 младенец
+                    img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
+                .dropdownSectionGuests__sectionWithDropdownContent
+                    .dropdownSectionGuests__sectionWithDropdownContent--item
+                        p.dropdownSectionGuests__sectionWithDropdownContent--text взрослые
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                        .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                    .dropdownSectionGuests__sectionWithDropdownContent--item
+                        p.dropdownSectionGuests__sectionWithDropdownContent--text дети 
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                        .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                    .dropdownSectionGuests__sectionWithDropdownContent--item
+                        p.dropdownSectionGuests__sectionWithDropdownContent--text младенцы
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                        .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                    .dropdownSectionGuests__button__cleanApply 
+                        .dropdownSectionGuests__button--clean(type="submit") Очистить
+                        .dropdownSectionGuests__button--apply(type="submit") Применить 
+            
+        // Range slider   
+        .slider__content
+            p.slider__text Диапазон цен
+            .slider__inputs
+                label(for="slider__input--first")
+                    input#slider__input--first(type="text", name="", placeholder="")
+                    span ₽
+                span -
+                label(for="slider__input--second")
+                    input#slider__input--second(type="text", name="", placeholder="")    
+                    span ₽
+        #slider
+        p.slider__description Стоимость за сутки пребывания в номере
+
+        //section with rules
+        .rules__title правила дома
+        //checkbox section 
+        .choicseListOfCheckBoxes__items
+            .choicseListOfCheckBoxes__list
+                input#choiseCheckbox__item--Smoke.choicseListOfCheckBoxes__item(type="checkbox")
+                label(for="choiseCheckbox__item--Smoke") Можно курить
+            .choicseListOfCheckBoxes__list
+                input#choiseCheckbox__item--Pets.choicseListOfCheckBoxes__item(type="checkbox")
+                label(for="choiseCheckbox__item--Pets") Можно с питомцами
+            .choicseListOfCheckBoxes__list
+                input#choiseCheckbox__item--Guests.choicseListOfCheckBoxes__item(type="checkbox")
+                label(for="choiseCheckbox__item--Guests") Можно пригласить гостей (до 10 человек)
+
+        .content__container 
+
+        //footer 
+        .footer__container 
+            .footer__logo 
+                img.header__logo(src="./img_website/logo.svg", alt="")
+                p.heder__description Бронирование номеров в&nbsp;лучшем отеле 2019 года по&nbsp;версии ассоциации &laquo;Отельные взгляды&raquo;
+            .footer__list--container 
+                ul.footer__list
+                    li.footer__list--item Навигация
+                    li.footer__list--item О нас
+                    li.footer__list--item Новости
+                    li.footer__list--item Служба поддержки
+                    li.footer__list--item Услуги
+                ul.footer__list
+                    li.footer__list--item О нас
+                    li.footer__list--item О сервисе
+                    li.footer__list--item Наша команда
+                    li.footer__list--item Вакансии
+                    li.footer__list--item Инвесторы
+                ul.footer__list
+                    li.footer__list--item Служба поддержки
+                    li.footer__list--item Согашения
+                    li.footer__list--item Сообщества
+                    li.footer__list--item Связь с нами
+            .footer__subscription
+                p.footer__subscription--title подписка
+                p.footer__subscription--description Получайте специальные предложения и новости сервиса
+                .email__button 
+                    p Email 
+                    img(src="./img_website/arrow_forward.svg", alt="")
+        .footer__container--copyriting
+            .copyriting
+                p Copyright © 2018 Toxin отель. Все права защищены.
+            .footer__links 
+                a.footer__links--item(href="#")
+                    img(src="./img_website/tw.svg", alt="") 
+                a.footer__links--item(href="#")
+                    img(src="./img_website/fb.svg", alt="") 
+                a.footer__links--item(href="#")
+                    img(src="./img_website/inst.svg", alt="") 
+
+
+    script(src="./js/jquery.js") 
+    script(src="./js/air-datepicker.js")
+    script(src="./js/nouislider.js") 
+    script(src="./js/calendar.js")
+    script(src="./js/slider.js")     
+    script(src="./js/website.js")
