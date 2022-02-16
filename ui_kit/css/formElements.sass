@@ -760,7 +760,6 @@ body
 
 //like button  
 .likeButton__choiseBox
-    margin-top: 40px
     display: flex
     justify-content: start
     position: relative
@@ -824,3 +823,67 @@ body
     line-height: 24px
     color: rgba(31, 32, 65, 0.75)
     list-style-image: url('../img/el.svg')
+
+    
+// comment section
+.comment__container--header,
+.comment__container--main
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: start
+
+.comment__container--header img
+    width: 47.67px
+    height: 48px
+    border: 2px solid #FFFFFF
+    box-sizing: border-box
+    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1))
+    border-radius: 32px
+
+.commenter__name
+    font-family: 'Montserrat-Regular'
+    font-weight: bold
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+.commenter__commitDate
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+.comment__text
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+    
+    
+    
+    
+    
+//toogle button
+.toogle__container
+    margin-top: 40px
+    position: relative
+    width: 40px
+    height: 20px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 10px
+
+.toogle_rectangle
+    position: absolute
+    width: 12px
+    height: 12px
+    background: rgba(31, 32, 65, 0.25)
+    border-radius: 10px 
+
+.toogle__container--active
+    border: 1px solid #BC9CFF
+
+.toogle_rectangle--active
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)

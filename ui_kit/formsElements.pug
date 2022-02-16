@@ -235,13 +235,14 @@ html(lang="en")
         label(for="choiseButton__toogle--first")
         span#choiseSpan__toogle
 
-    //like button 
-    .likeButton__choiseBox 
-        input.likeButton__choiseBox--choise(type="checkbox")
-        .likeButton__choiseBox--images 
-            img.like__unactive(src="./img/likeUnActive.svg", alt="")
-            img.like__active(src="./img/likeActive.svg", alt="")
-        .likeButton__choiseBox--count 0
+    //like button
+    mixin likeButton 
+        .likeButton__choiseBox 
+            input.likeButton__choiseBox--choise(type="checkbox")
+            .likeButton__choiseBox--images 
+                img.like__unactive(src="./img/likeUnActive.svg", alt="")
+                img.like__active(src="./img/likeActive.svg", alt="")
+            .likeButton__choiseBox--count 0
 
     //rich checkbox item
     .richCheckBox__section 
@@ -264,10 +265,19 @@ html(lang="en")
 
 
     //comment section
-    .comment 
+    .comment__container 
+        .comment__container--header 
+            img(src="./img/ava.png", alt="Avatar")
+            .commenter
+                .commenter__name Мурад Сарафанов
+                .commenter__commitDate 5 дней назад
+        .comment__container--main   
+            +likeButton
+            .comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
         
-            
-
+    //toogle button
+    .toogle__container 
+        .toogle_rectangle            
 
 
 

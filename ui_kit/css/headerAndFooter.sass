@@ -1,0 +1,362 @@
+@font-face 
+    font-family: 'Montserrat-Regular'
+    src: url('../fonts/Montserrat-Regular.woff') format('woff')
+    font-display: swap
+    font-weight: 400
+    font-style: normal
+
+@font-face 
+    font-family: 'Montserrat-ExtraBold'
+    src: url('../fonts/Montserrat-ExtraBold.woff') format('woff')
+    font-display: swap
+    font-weight: 700
+    font-style: normal
+
+@font-face 
+    font-family: 'Quicksand-Regular'
+    src: url('../fonts/Quicksand-Regular.woff') format('woff')
+    font-display: swap
+    font-weight: 700
+    font-style: norma
+    
+body
+    background: #E5E5E5
+
+.header__logo
+    width: 105.69px
+    height: 40px 
+
+
+//header without signIn 
+
+.header__container--general
+    width: 100vw
+    margin-left: calc(-50vw + 50%)
+    height: 70px
+    background: #FFFFFF
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+    
+
+.header__container
+    margin-top: 70px
+    padding-left: 8.5%
+    display: flex
+
+.header__logo
+    padding-top: 0.9%
+
+.header__list--container
+    padding-top: 1.8%
+    padding-left: 18.5%
+
+.header__list
+    list-style-type: none
+    display: flex
+    margin: 0
+    padding: 0
+
+.header__list--item
+    padding-left: 17px
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 17px
+    color: rgba(31, 32, 65, 0.5)
+
+.header__list--item:nth-child(1)
+    font-family: 'Montserrat-ExtraBold'
+
+.header__list--item:nth-child(2)
+    margin-left: 5px
+.header__list--item:nth-child(3)
+    margin-left: 10px
+
+.header__list--item:nth-child(4)
+    margin-left: 4px
+
+.header__list--item:nth-child(5)
+    margin-left: 3px
+
+.header__list--item img
+    width: 12px
+    height: 10px  
+    padding-left: 5px 
+
+.signIn__button--container
+    margin-left: 26px
+    margin-top: 14px
+    width: 87px
+    height: 34px
+    position: relative
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 22px
+
+
+.signIn__button
+
+    position: absolute
+    
+    width: 83px
+    height: 30px
+    top: 2px
+    left: 2px
+    background: #fff
+    border-radius: 22px
+
+   
+
+.signIn__button p
+    margin: 0
+    padding: 0
+    text-align: center
+    padding-top: 0.7em
+    font-family: 'Montserrat-Regular'
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #BC9CFF
+    
+.registration__button
+    margin-left: 22px
+    margin-top: 14px
+  
+    width: 196px
+    height: 34px
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 22px
+    
+.registration__button p
+    margin: 0
+    padding: 0
+    padding-left: 18px
+    padding-top: 0.8em
+    font-family: 'Montserrat-Regular'
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #FFFFFF
+
+
+//header with signIn
+
+.header__listContainer
+    padding-top: 25px
+    margin-left: 31.5%
+
+.header__list--signin__items 
+    list-style-type: none
+    display: flex
+    margin-top: 0
+    padding: 0
+    margin-left: 10px
+    margin-left: 10px
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 17px
+    color: rgba(31, 32, 65, 0.5)
+
+.header__list--signin:nth-child(1)
+    font-family: 'Montserrat-ExtraBold'
+
+.header__list--signin:nth-child(2)
+    margin-left: 17px
+
+.header__list--signin:nth-child(3)
+    margin-left: 27px
+
+.header__list--signin:nth-child(4)
+    margin-left: 23px
+
+.header__list--signin:nth-child(5)
+    margin-left: 21px
+
+.vertical__line
+    display: block
+    width: 1px
+    height: 30px
+    margin: 0
+    padding: 0
+    margin-left: 25px
+    margin-top: -7px
+    background: rgba(31, 32, 65, 0.1)
+
+.header__list--signin img
+    width: 12px
+    height: 10px
+    margin-left: 6px
+
+.person__name
+    margin-left: 20px
+
+
+
+//footer
+.footer__container 
+    width: 100vw
+    margin-left: calc(-50vw + 50%)
+    margin-top: 37px
+    display: flex
+
+    height: 372px
+    background: #FFFFFF
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1)
+
+.footer__logo 
+    margin-left: 138px
+    margin-top: 99px
+    width: 260px
+    height: 132px
+
+.footer__logo  p
+    line-height: 1.7em
+
+.footer__list--container
+    display: flex
+    margin-top: 104px
+
+    
+
+.footer__list
+    margin-left: 44px
+    list-style-type: none
+    margin-top: 0
+    padding: 0
+
+.footer__list:nth-child(2)
+    margin-left: 57px
+
+.footer__list:nth-child(3)
+    margin-left: 90px
+
+.footer__list--item:nth-child(1)
+    font-family: 'Montserrat-ExtraBold'
+
+.footer__list--item:nth-child(2n)
+    margin-top: 21px
+
+.footer__list--item:nth-child(3n)
+    margin-top: 21px
+
+.footer__list--item:nth-child(5)
+    margin-top: 20px
+
+.heder__description
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 17px
+    color: rgba(31, 32, 65, 0.5)
+
+.footer__list--item
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 17px
+    color: rgba(31, 32, 65, 0.5)
+
+.footer__subscription
+    width: 260px
+    height: 44px
+    margin-left: 47px
+    margin-top: 91px
+
+.footer__subscription--description
+    margin-top: 20px
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+.footer__subscription--title
+    width: 76px
+    height: 15px
+    font-family: 'Montserrat-Regular'
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #1F2041
+
+.email__button 
+    margin-top: 22px
+    display: flex
+    width: 260px
+    height: 44px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+
+.email__button p
+    padding-left: 15px
+    margin: 0
+    padding-top: 9px
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.25)
+
+
+.email__button img
+    background-clip: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    
+
+//footer copyriting
+.footer__container--copyriting
+    display: flex
+    justify-content: start
+    width: 100vw
+    margin-left: calc(-50vw + 50%)
+    height: 70px
+    background: #FFFFFF
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+    border-top: 3px solid #E5E5E5
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 17px
+    color: rgba(31, 32, 65, 0.75)
+    
+.copyriting
+    margin-left: 138px
+    margin-top: 11px
+
+.footer__links 
+    margin-left: 675px
+    margin-top: 20px
+
+.footer__links--item:nth-child(2)
+    margin-left: 21px
+.footer__links--item:nth-child(3)
+    margin-left: 22px
+
+//footer short 
+.footer__short--container
+    margin-top: 36px
+    margin-left: 320px
+    text-align: center
+    width: 768px
+    height: 367px
+    background: #FFFFFF
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+
+.footer__logo--short
+    margin: 0
+    padding: 0
+    width: 105.69px
+    height: 40px
+    margin-top: 120px
+
+.footer__short--container p
+    margin-top: 20px
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 17px
+    color: rgba(31, 32, 65, 0.75)
+
+.footer__links--short
+    margin-top: 23px
+    margin-left: -26px
+    
+.footer__links--short--item
+    margin-left: 20px
