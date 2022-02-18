@@ -10,25 +10,124 @@ html(lang="en")
         link(rel="stylesheet", href="css/landing.sass")
         title Metalamp
     body 
+
+        //**********Mixins*****************
+        //mixin header
+        mixin header
+            .header__container--general
+                .header__container 
+                    img.header__logo(src="./img_website/logo.svg", alt="")
+                    .header__list--container
+                        ul.header__list 
+                            li.header__list--item О нас
+                            li.header__list--item Услуги
+                                img(src="./img_website/expand_more.svg", alt="")
+                            li.header__list--item Вакансии
+                            li.header__list--item Новости
+                            li.header__list--item Соглашения
+                                img(src="./img_website/expand_more.svg", alt="")
+                    .signIn__button--container
+                        .signIn__button 
+                            p войти
+                    .registration__button 
+                        p зарегестрироваться 
+        //mixin footer
+        mixin footer
+            .footer__container 
+                .footer__logo 
+                    img.header__logo(src="./img_website/logo.svg", alt="")
+                    p.heder__description Бронирование номеров в&nbsp;лучшем отеле 2019 года по&nbsp;версии ассоциации &laquo;Отельные взгляды&raquo;
+                .footer__list--container 
+                    ul.footer__list
+                        li.footer__list--item Навигация
+                        li.footer__list--item О нас
+                        li.footer__list--item Новости
+                        li.footer__list--item Служба поддержки
+                        li.footer__list--item Услуги
+                    ul.footer__list
+                        li.footer__list--item О нас
+                        li.footer__list--item О сервисе
+                        li.footer__list--item Наша команда
+                        li.footer__list--item Вакансии
+                        li.footer__list--item Инвесторы
+                    ul.footer__list
+                        li.footer__list--item Служба поддержки
+                        li.footer__list--item Согашения
+                        li.footer__list--item Сообщества
+                        li.footer__list--item Связь с нами
+                .footer__subscription
+                    p.footer__subscription--title подписка
+                    p.footer__subscription--description Получайте специальные предложения и новости сервиса
+                    .email__button 
+                        p Email 
+                        img(src="./img_website/arrow_forward.svg", alt="")
+            .footer__container--copyriting
+                .copyriting
+                    p Copyright © 2018 Toxin отель. Все права защищены.
+                .footer__links 
+                    a.footer__links--item(href="#")
+                        img(src="./img_website/tw.svg", alt="") 
+                    a.footer__links--item(href="#")
+                        img(src="./img_website/fb.svg", alt="") 
+                    a.footer__links--item(href="#")
+                        img(src="./img_website/inst.svg", alt="") 
+        //page delimiter
+        mixin delimiter 
+            .page__delimiter
+        //like button
+        mixin likeButton 
+            .likeButton__choiseBox 
+                input.likeButton__choiseBox--choise(type="checkbox")
+                .likeButton__choiseBox--images 
+                    img.like__unactive(src="./img_website/likeUnActive.svg", alt="")
+                    img.like__active(src="./img_website/likeActive.svg", alt="")
+                .likeButton__choiseBox--count 0
+        //apartment
+        mixin apartment
+            .apartment 
+                .apartment__slider
+                    button.prev__img(type= "button")
+                        img(src= "./img_website/prev.png")
+                    .apartment__sleder--gallery
+                        div#listItems
+                    button.next__img(type= "button")
+                        img(src="./img_website/next.png")
+                    .apartment__slider--quantity
+                        span.apartment__slider--quantityRectangle#rectangle 
+                        span.apartment__slider--quantityRectangle#rectangle 
+                        span.apartment__slider--quantityRectangle#rectangle
+                        span.apartment__slider--quantityRectangle#rectangle
+                .apartment__info 
+                    p.apartment__info--number 
+                        span.apartment__info--simbol №
+                        span.numberOfaparture 888 
+                        span.view люкс
+                    p.apartment__info--price 9 990₽ 
+                        span.apartment__info--priceIn в сутки
+                hr.apartment__line
+                .apartment__mention 
+                    .apartment__mention--star 
+                        mixin starRating(typeOf, idOf, name, valueOf)
+                            input(type =""+typeOf, id =""+idOf, name =""+nameOf, value =""+valueOf)
+                        mixin labelForStar(numberOf, titleOf)
+                            label(for =""+numberOf, title =""+titleOf)
+                        +starRating("radio", "star_5", "rating", "5")
+                        +labelForStar("star_5", "Оценка 5")
+                        +starRating("radio", "star_4", "rating", "4")
+                        +labelForStar("star_4", "Оценка 4")
+                        +starRating("radio", "star_3", "rating", "3")
+                        +labelForStar("star_3", "Оценка 3")
+                        +starRating("radio", "star_2", "rating", "2")
+                        +labelForStar("star_2", "Оценка 2")
+                        +starRating("radio", "star_1", "rating", "1")
+                        +labelForStar("star_1", "Оценка 1")
+                    .apartment__mention--numbers
+                        p.apartment__mention--numbersMention 145 Отзывов
+        
         //**********First page*************
         //Header without person
-        .header__container--general
-            .header__container 
-                img.header__logo(src="./img_website/logo.svg", alt="")
-                .header__list--container
-                    ul.header__list 
-                        li.header__list--item О нас
-                        li.header__list--item Услуги
-                            img(src="./img_website/expand_more.svg", alt="")
-                        li.header__list--item Вакансии
-                        li.header__list--item Новости
-                        li.header__list--item Соглашения
-                            img(src="./img_website/expand_more.svg", alt="")
-                .signIn__button--container
-                    .signIn__button 
-                        p войти
-                .registration__button 
-                    p зарегестрироваться 
+        
+        +header
         //image container with background image
         .container__img 
         
@@ -80,67 +179,13 @@ html(lang="en")
                 p подобрать номер
                 img(src="./img_website/arrow_forward.svg", alt="")
         //footer 
-        .footer__container 
-            .footer__logo 
-                img.header__logo(src="./img_website/logo.svg", alt="")
-                p.heder__description Бронирование номеров в&nbsp;лучшем отеле 2019 года по&nbsp;версии ассоциации &laquo;Отельные взгляды&raquo;
-            .footer__list--container 
-                ul.footer__list
-                    li.footer__list--item Навигация
-                    li.footer__list--item О нас
-                    li.footer__list--item Новости
-                    li.footer__list--item Служба поддержки
-                    li.footer__list--item Услуги
-                ul.footer__list
-                    li.footer__list--item О нас
-                    li.footer__list--item О сервисе
-                    li.footer__list--item Наша команда
-                    li.footer__list--item Вакансии
-                    li.footer__list--item Инвесторы
-                ul.footer__list
-                    li.footer__list--item Служба поддержки
-                    li.footer__list--item Согашения
-                    li.footer__list--item Сообщества
-                    li.footer__list--item Связь с нами
-            .footer__subscription
-                p.footer__subscription--title подписка
-                p.footer__subscription--description Получайте специальные предложения и новости сервиса
-                .email__button 
-                    p Email 
-                    img(src="./img_website/arrow_forward.svg", alt="")
-        .footer__container--copyriting
-            .copyriting
-                p Copyright © 2018 Toxin отель. Все права защищены.
-            .footer__links 
-                a.footer__links--item(href="#")
-                    img(src="./img_website/tw.svg", alt="") 
-                a.footer__links--item(href="#")
-                    img(src="./img_website/fb.svg", alt="") 
-                a.footer__links--item(href="#")
-                    img(src="./img_website/inst.svg", alt="") 
-
+        +footer
 
 
         //***********Second page************
-        .page__delimiter
+        +delimiter
         //Header without person
-        .header__container--general
-            .header__container 
-                img.header__logo(src="./img_website/logo.svg", alt="")
-                .header__list--container
-                    ul.header__list 
-                        li.header__list--item О нас
-                        li.header__list--item Услуги
-                            img(src="./img_website/expand_more.svg", alt="")
-                        li.header__list--item Вакансии
-                        li.header__list--item Новости
-                        li.header__list--item Соглашения
-                            img(src="./img_website/expand_more.svg", alt="")
-                .signIn__button--container
-                    .signIn__button 
-                        p войти
-                .registration__button 
-                    p зарегестрироваться 
+        +header
 
         //content container
         .conteiner__general
@@ -275,48 +320,7 @@ html(lang="en")
                 h2.content__title Номера, которые мы для вас подобрали
                 .apartment__container 
                     //**********apartment section******
-                    mixin apartment
-                        .apartment 
-                            .apartment__slider
-                                button.prev__img(type= "button")
-                                    img(src= "./img_website/prev.png")
-                                .apartment__sleder--gallery
-                                    div#listItems
-                                button.next__img(type= "button")
-                                    img(src="./img_website/next.png")
-                                .apartment__slider--quantity
-                                    span.apartment__slider--quantityRectangle#rectangle 
-                                    span.apartment__slider--quantityRectangle#rectangle 
-                                    span.apartment__slider--quantityRectangle#rectangle
-                                    span.apartment__slider--quantityRectangle#rectangle
-                            .apartment__info 
-                                p.apartment__info--number 
-                                    span.apartment__info--simbol №
-                                    span.numberOfaparture 888 
-                                    span.view люкс
-                                p.apartment__info--price 9 990₽ 
-                                    span.apartment__info--priceIn в сутки
 
-                            hr.apartment__line
-
-                            .apartment__mention 
-                                .apartment__mention--star 
-                                    mixin starRating(typeOf, idOf, name, valueOf)
-                                        input(type =""+typeOf, id =""+idOf, name =""+nameOf, value =""+valueOf)
-                                    mixin labelForStar(numberOf, titleOf)
-                                        label(for =""+numberOf, title =""+titleOf)
-                                    +starRating("radio", "star_5", "rating", "5")
-                                    +labelForStar("star_5", "Оценка 5")
-                                    +starRating("radio", "star_4", "rating", "4")
-                                    +labelForStar("star_4", "Оценка 4")
-                                    +starRating("radio", "star_3", "rating", "3")
-                                    +labelForStar("star_3", "Оценка 3")
-                                    +starRating("radio", "star_2", "rating", "2")
-                                    +labelForStar("star_2", "Оценка 2")
-                                    +starRating("radio", "star_1", "rating", "1")
-                                    +labelForStar("star_1", "Оценка 1")
-                                .apartment__mention--numbers
-                                    p.apartment__mention--numbersMention 145 Отзывов
                     .apartment 
                         +apartment
                     .apartment 
@@ -362,105 +366,178 @@ html(lang="en")
                     p 1 – 12 из 100+ вариантов аренды 
 
         //footer 
-        .footer__container 
-            .footer__logo 
-                img.header__logo(src="./img_website/logo.svg", alt="")
-                p.heder__description Бронирование номеров в&nbsp;лучшем отеле 2019 года по&nbsp;версии ассоциации &laquo;Отельные взгляды&raquo;
-            .footer__list--container 
-                ul.footer__list
-                    li.footer__list--item Навигация
-                    li.footer__list--item О нас
-                    li.footer__list--item Новости
-                    li.footer__list--item Служба поддержки
-                    li.footer__list--item Услуги
-                ul.footer__list
-                    li.footer__list--item О нас
-                    li.footer__list--item О сервисе
-                    li.footer__list--item Наша команда
-                    li.footer__list--item Вакансии
-                    li.footer__list--item Инвесторы
-                ul.footer__list
-                    li.footer__list--item Служба поддержки
-                    li.footer__list--item Согашения
-                    li.footer__list--item Сообщества
-                    li.footer__list--item Связь с нами
-            .footer__subscription
-                p.footer__subscription--title подписка
-                p.footer__subscription--description Получайте специальные предложения и новости сервиса
-                .email__button 
-                    p Email 
-                    img(src="./img_website/arrow_forward.svg", alt="")
-        .footer__container--copyriting
-            .copyriting
-                p Copyright © 2018 Toxin отель. Все права защищены.
-            .footer__links 
-                a.footer__links--item(href="#")
-                    img(src="./img_website/tw.svg", alt="") 
-                a.footer__links--item(href="#")
-                    img(src="./img_website/fb.svg", alt="") 
-                a.footer__links--item(href="#")
-                    img(src="./img_website/inst.svg", alt="") 
+        +footer 
 
         //***********Third page************
-        .page__delimiter
+        +delimiter
         //Header without person
-        .header__container--general
-            .header__container 
-                img.header__logo(src="./img_website/logo.svg", alt="")
-                .header__list--container
-                    ul.header__list 
-                        li.header__list--item О нас
-                        li.header__list--item Услуги
-                            img(src="./img_website/expand_more.svg", alt="")
-                        li.header__list--item Вакансии
-                        li.header__list--item Новости
-                        li.header__list--item Соглашения
-                            img(src="./img_website/expand_more.svg", alt="")
-                .signIn__button--container
-                    .signIn__button 
-                        p войти
-                .registration__button 
-                    p зарегестрироваться 
+        +header
+ 
+        //header image 
+        .header__image
+            .header__img--container  
+                img(src="./img/header_img3.png", alt="")
+            .header__image--container 
+                img(src="./img/header_img.png", alt="")
+                img(src="./img/header_img2.png", alt="")
+            
+            
+        //content container
+        .apartment__imformation 
+           
+            .apartment__information--left 
+                 
+                .apart__info
+                    
+                    .apart__intelligence
+                        .apart__intelligence--descr 
+                            p.apart__intelligence--title Сведения о номере 
+                            p.apart__intelligence--comments 2 отзыва
+                        .apart__intelligence--item 
+                            img(src="./img/insert_emoticon.svg", alt="")
+                            .apart__intelligence--descr
+                                p.descr__title Комфорт
+                                p.descr__subscribe Шумопоглащающие стены
+                        .apart__intelligence--item 
+                            img(src="./img/location_city.svg", alt="")
+                            .apart__intelligence--descr
+                                p.descr__title Удобство
+                                p.descr__subscribe Окно в каждой из спален
+                        .apart__intelligence--item 
+                            img(src="./img/whatshot.svg", alt="")
+                            .apart__intelligence--descr
+                                p.descr__title Уют
+                                p.descr__subscribe Номер оснащен камином
 
+                    .apart__impression 
+                        p.apart__impression--title Впечатления от номера
+                        .apart__impression--rect 
+                            .rect__left 
+                            .rect__right
+                                .rect__right--top
+                                .rect__right--botton 
+                                span.top__span 
+                                span.right__span 
+                                span.bottom__span
+                            .rect__voise
+                                .rect__voise--descr 
+                                    p.rect__voise--number 260
+                                    p.rect__voise--voises голосов
+
+                        ul.apart__impression--list
+                            li.apart__impression--item Великолепно
+                            li.apart__impression--item Хорошо
+                            li.apart__impression--item Удовлетворительно
+                            li.apart__impression--item Разочарован
+
+                .apart__review 
+                    .apart__review--title Отзывы посетителей номера
+                    
+                    //comment section
+                    .comment__container--general
+                        .comment__container 
+                            .comment__container--header 
+                                img(src="./img_website/ava.png", alt="Avatar")
+                                .commenter
+                                    .commenter__name Мурад Сарафанов
+                                    .commenter__commitDate 5 дней назад
+                            .comment__container--main   
+                                +likeButton
+                                .comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. <br> И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто <br> не жаловался из соседей.
+                        //comment section
+                        .comment__container 
+                            .comment__container--header 
+                                img(src="./img_website/ava.png", alt="Avatar")
+                                .commenter
+                                    .commenter__name Патрисия Стёклышкова
+                                    .commenter__commitDate Неделю назад
+                            .comment__container--main   
+                                +likeButton
+                                .comment__text Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,  <br> каждый день новое блюдо и десерт как комплимент
+                                .apartment__information--right
+
+                .apart__rulls 
+                    //bullet list
+                    .bulletList
+                        p.bulletList--title Правила 
+                        ul.bulletList--items 
+                            li.bulletList--item Нельзя с питомцами
+                            li.bulletList--item Без вечеринок и мероприятий
+                            li.bulletList--item Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00
+                    .cancellation
+                        p.cancellation--title Отмена
+                        p.cancellation--descr Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.    
+
+
+            .apartment__information--right 
+                .apartment__form--container 
+                    .apartment__form--header 
+                        .apartment__form--room
+                            p.apartment__form--number №
+                            p.apartment__form--item 888
+                            p.apartment__form--room люкс
+                        .apartment__form--cost 
+                            p.apartment__form--costRoom 9 990 ₽
+                            p.apartment__form--costDay в сутки
+                    .apartment__form--content 
+                        //date calendar dropdown
+                        .dropdown-date
+                            .dropdown-date__wrapper
+                                .dropdown-date__arrival
+                                    .dropdown-date__name прибытие   
+                                    .dropdown-date__form
+                                        input.dropdown-date__range.dropdown-date__range_from(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
+                                        span.dropdown-date__arrow.dropdown-date__arrow_down
+                                
+                                .dropdown-date__departure
+                                    .dropdown-date__name выезд
+                                    .dropdown-date__form
+                                        input.dropdown-date__range.dropdown-date__range_to(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
+                                        span.dropdown-date__arrow.dropdown-date__arrow_down
+                        //dropdown guests
+                        .dropdownSectionGuests
+                            p гости
+                            button.dropdownSectionGuests__button
+                                .dropdownSectionGuests__button--text 3 Гостя
+                                img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
+                            .dropdownSectionGuests__sectionWithDropdownContent
+                                .dropdownSectionGuests__sectionWithDropdownContent--item
+                                    p.dropdownSectionGuests__sectionWithDropdownContent--text взрослые
+                                    span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                                    .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                                    span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                                .dropdownSectionGuests__sectionWithDropdownContent--item
+                                    p.dropdownSectionGuests__sectionWithDropdownContent--text дети 
+                                    span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                                    .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                                    span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                                .dropdownSectionGuests__sectionWithDropdownContent--item
+                                    p.dropdownSectionGuests__sectionWithDropdownContent--text младенцы
+                                    span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                                    .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                                    span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                                .dropdownSectionGuests__button__cleanApply 
+                                    .dropdownSectionGuests__button--clean(type="submit") Очистить
+                                    .dropdownSectionGuests__button--apply(type="submit") Применить 
         //footer 
-        .footer__container 
-            .footer__logo 
-                img.header__logo(src="./img_website/logo.svg", alt="")
-                p.heder__description Бронирование номеров в&nbsp;лучшем отеле 2019 года по&nbsp;версии ассоциации &laquo;Отельные взгляды&raquo;
-            .footer__list--container 
-                ul.footer__list
-                    li.footer__list--item Навигация
-                    li.footer__list--item О нас
-                    li.footer__list--item Новости
-                    li.footer__list--item Служба поддержки
-                    li.footer__list--item Услуги
-                ul.footer__list
-                    li.footer__list--item О нас
-                    li.footer__list--item О сервисе
-                    li.footer__list--item Наша команда
-                    li.footer__list--item Вакансии
-                    li.footer__list--item Инвесторы
-                ul.footer__list
-                    li.footer__list--item Служба поддержки
-                    li.footer__list--item Согашения
-                    li.footer__list--item Сообщества
-                    li.footer__list--item Связь с нами
-            .footer__subscription
-                p.footer__subscription--title подписка
-                p.footer__subscription--description Получайте специальные предложения и новости сервиса
-                .email__button 
-                    p Email 
-                    img(src="./img_website/arrow_forward.svg", alt="")
-        .footer__container--copyriting
-            .copyriting
-                p Copyright © 2018 Toxin отель. Все права защищены.
-            .footer__links 
-                a.footer__links--item(href="#")
-                    img(src="./img_website/tw.svg", alt="") 
-                a.footer__links--item(href="#")
-                    img(src="./img_website/fb.svg", alt="") 
-                a.footer__links--item(href="#")
-                    img(src="./img_website/inst.svg", alt="") 
+        +footer
+        
+        //*************Four page**********
+        +delimiter
+        //header
+        +header 
+        .four__page--image
+        //footer
+        +footer
+
+        //************Five page***********
+        +delimiter
+        //header
+        +header
+        .five__page--image
+
+        //footer
+        +footer
     script(src="./js/jquery.js") 
     script(src="./js/air-datepicker.js")
     script(src="./js/nouislider.js") 

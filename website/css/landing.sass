@@ -1,6 +1,10 @@
+
+//**********variables***********   
 $width__button: 44px
 $width__img: 270px
 $height__img: 150px
+
+//**********resets**************
     
 // list-reset intended for reset all browser styles  
 list-reset 
@@ -16,7 +20,7 @@ btn-reset
     background-color: transparent
     cursor: pointer
   
-    
+//**********Fonts****************
 @font-face 
     font-family: 'Montserrat-Regular'
     src: url('../fonts/Montserrat-Regular.woff') format('woff')
@@ -37,6 +41,9 @@ btn-reset
     font-display: swap
     font-weight: 700
     font-style: normal
+
+//**************Mixins*************
+
 @mixin allStrings
     width: 266px
     height: 44px 
@@ -1208,3 +1215,280 @@ body
     font-family: 'Montserrat-Regular'
     font-size: 14px
     color: rgba(31, 32, 65, 0.75)
+
+
+//****************Page 3*************
+.apartment__imformation 
+    background-color: #fff
+    display: flex
+
+.apartment__information--left
+    padding-left: 138px
+
+.header__image
+    display: flex
+    width: 100vw
+    margin-left: calc(-50vw + 50%)
+    margin: 0
+    padding: 0
+    
+
+.header__img--container
+    width: 981px
+    height: 485px   
+    padding: 0
+    margin: 0 
+
+
+.header_img--container img
+    width: 981px
+    height: 485px
+    padding: 0
+    margin: 0
+
+//rectangle impressions
+.apart__info 
+    display: flex
+
+.apart__intelligence--item
+    display: flex
+
+.apart__impression--rect 
+    display: flex
+    position: relative
+
+.rect__left
+    position: relative
+    width: 60px
+    height: 120px
+    z-index: 1
+    border-radius: 100% 0 0 100% / 50% 0 0 50%
+    background-image: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%)
+
+
+.rect__right--top
+    position: absolute
+    left: 0
+    width: 120px
+    height: 60px
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+.rect__right--botton
+    position: absolute
+    left: 0
+    top: 60px
+    width: 120px
+    height: 60px
+    border-radius: 0 0 50% 50% / 0 0 100% 100%
+    background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+
+.top__span
+    position: absolute
+    top: 0
+    width: 2px
+    height: 4px
+    background-color: #fff
+
+.right__span 
+    width: 2px
+    height: 2px
+    position: absolute
+    top: 60px
+    left: 118px
+    background-color: #fff
+
+.bottom__span
+    width: 2px
+    height: 2px
+    position: absolute
+    top: 118px
+    background-color: #fff
+
+.rect__voise
+    position: absolute
+    text-align: center
+    width: 116px
+    height: 116px
+    background-color: #fff
+    left: 2px
+    top: 2px
+    z-index: 2
+    border-radius: 100%
+
+.rect__voise--descr
+    margin-top: 25%
+.rect__voise--number
+    display: block
+    
+    padding: 0
+    margin: 0
+    font-family: 'Montserrat-ExtraBold'
+    font-size: 24px
+    line-height: 29px
+    color: #BC9CFF
+
+.rect__voise--voises
+    padding: 0
+    margin: 0
+    font-family: 'Montserrat-ExtraBold'
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #BC9CFF
+
+.apart__impression--list
+    list-style-type: none
+    padding-left: 120px
+
+.apart__impression--list
+    :nth-child(1)
+        list-style-image: url("../img/first_elips.png")
+.apart__impression--list
+    :nth-child(2)
+        list-style-image: url("../img/second_elipse.png")
+.apart__impression--list
+    :nth-child(3)
+        list-style-image: url("../img/third_elipse.png")
+.apart__impression--list
+    :nth-child(4)
+        list-style-image: url("../img/four_elipse.png")
+    
+    
+.apart__impression--item
+
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+
+
+//like button  
+.likeButton__choiseBox
+    display: flex
+    justify-content: start
+    position: relative
+    width: 40px
+    height: 20px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 10px
+
+.like__unactive,
+.like__active
+    display: block
+    width: 10px
+    height: 10px
+    position: absolute
+    top: 5px
+    left: 4px
+
+.like__active
+    opacity: 0
+
+.likeButton__choiseBox--choise
+    z-index: 3
+    margin: 0
+    padding: 0
+    width: 50px
+    height: 20px
+    opacity: 0
+    
+.likeButton__choiseBox--count
+    position: absolute
+    top: 3px
+    left: 22px
+    font-family: 'Montserrat-Regular'
+    font-size: 10px
+    line-height: 12px
+    color: rgba(31, 32, 65, 0.25)
+
+// comment section
+
+
+
+.comment__container--header,
+.comment__container--main
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: start
+
+.comment__container--header img
+    width: 47.67px
+    height: 48px
+    border: 2px solid #FFFFFF
+    box-sizing: border-box
+    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1))
+    border-radius: 32px
+
+.commenter__name
+    font-family: 'Montserrat-Regular'
+    font-weight: bold
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+.commenter__commitDate
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+.comment__text
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+//bullet list
+.bulletList--items
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+    list-style-image: url('../img_website/el.svg')
+
+.apart__rulls
+    display: flex
+
+.bulletList
+    width: 292px
+    height: 160px
+.cancellation
+    width: 341px
+    height: 140px
+//************right section*****************
+
+.apartment__form--container
+    width: 380px
+    height: 512px
+    background: #FFFFFF
+    border: 1px solid rgba(0, 0, 0, 0.12)
+    box-sizing: border-box
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+    border-radius: 4px
+
+
+//*************Four page**********
+.four__page--image
+    background-image: url("../img/bg_img.png")
+    height: 1022px
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100vw
+    margin-left: calc(-50vw + 50%)
+
+
+//************Five page***********
+.five__page--image
+    background-image: url("../img/bg_img.png")
+    height: 1022px
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100vw
+    margin-left: calc(-50vw + 50%)

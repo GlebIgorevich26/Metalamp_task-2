@@ -241,23 +241,23 @@ buttonNext.addEventListener('click', () => {
 //     };
 // });
 
-// like section
-// const likediv = document.querySelector('.likeButton__choiseBox ');
-// const likeActive = document.querySelector('.like__active');
-// const likeUnActive = document.querySelector('.like__unactive');
-// const likeOut = document.querySelector('.likeButton__choiseBox--count');
-// const likeCheckBox = document.querySelector('.likeButton__choiseBox--choise');
-// let likeCheckBoxCount = 0;
+//like section
+const likediv = document.querySelector('.likeButton__choiseBox ');
+const likeActive = document.querySelector('.like__active');
+const likeUnActive = document.querySelector('.like__unactive');
+const likeOut = document.querySelector('.likeButton__choiseBox--count');
+const likeCheckBox = document.querySelector('.likeButton__choiseBox--choise');
+let likeCheckBoxCount = 0;
 
-// likeCheckBox.addEventListener('click', function() {
-//     if (likeCheckBox.checked == true) {
-//         likeActive.style.opacity = '1';
-//         likediv.style.border = '1px solid #BC9CFF';
-//         likeUnActive.style.opacity = '0';
-//         likeOut.innerHTML = ++likeCheckBoxCount;
-//         likeOut.style.color = '#BC9CFF';
-//     }
-// });
+likeCheckBox.addEventListener('click', function() {
+    if (likeCheckBox.checked == true) {
+        likeActive.style.opacity = '1';
+        likediv.style.border = '1px solid #BC9CFF';
+        likeUnActive.style.opacity = '0';
+        likeOut.innerHTML = ++likeCheckBoxCount;
+        likeOut.style.color = '#BC9CFF';
+    }
+});
 
 //section with apartment
 // let slyderContainer = document.querySelector('#listItems');
