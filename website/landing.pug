@@ -150,60 +150,216 @@ html(lang="en")
                 .filterDate 
                     input.filterDate-item(type="text", name="", placeholder="23 августа - 24 августа")
                 //dropdown guests
-            .dropdownSectionGuests__second
-                p гости
-                button.dropdownSectionGuests__button
-                    .dropdownSectionGuests__button--text 3 Гостя, 1 младенец
-                    img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
-                .dropdownSectionGuests__sectionWithDropdownContent
-                    .dropdownSectionGuests__sectionWithDropdownContent--item
-                        p.dropdownSectionGuests__sectionWithDropdownContent--text взрослые
-                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
-                        .dropdownSectionGuests__sectionWithDropdownContent--Number 0
-                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
-                    .dropdownSectionGuests__sectionWithDropdownContent--item
-                        p.dropdownSectionGuests__sectionWithDropdownContent--text дети 
-                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
-                        .dropdownSectionGuests__sectionWithDropdownContent--Number 0
-                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
-                    .dropdownSectionGuests__sectionWithDropdownContent--item
-                        p.dropdownSectionGuests__sectionWithDropdownContent--text младенцы
-                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
-                        .dropdownSectionGuests__sectionWithDropdownContent--Number 0
-                        span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
-                    .dropdownSectionGuests__button__cleanApply 
-                        .dropdownSectionGuests__button--clean(type="submit") Очистить
-                        .dropdownSectionGuests__button--apply(type="submit") Применить 
-            
-        // Range slider   
-        .slider__content
-            p.slider__text Диапазон цен
-            .slider__inputs
-                label(for="slider__input--first")
-                    input#slider__input--first(type="text", name="", placeholder="")
-                    span ₽
-                span -
-                label(for="slider__input--second")
-                    input#slider__input--second(type="text", name="", placeholder="")    
-                    span ₽
-        #slider
-        p.slider__description Стоимость за сутки пребывания в номере
+                .dropdownSectionGuests__second
+                    h6.dropdownSectionGuests__second--title гости
+                    button.dropdownSectionGuests__button
+                        .dropdownSectionGuests__button--text 3 Гостя, 1 младенец
+                        img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
+                    .dropdownSectionGuests__sectionWithDropdownContent
+                        .dropdownSectionGuests__sectionWithDropdownContent--item
+                            p.dropdownSectionGuests__sectionWithDropdownContent--text взрослые
+                            span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                            .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                            span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                        .dropdownSectionGuests__sectionWithDropdownContent--item
+                            p.dropdownSectionGuests__sectionWithDropdownContent--text дети 
+                            span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                            .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                            span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                        .dropdownSectionGuests__sectionWithDropdownContent--item
+                            p.dropdownSectionGuests__sectionWithDropdownContent--text младенцы
+                            span.dropdownSectionGuests__sectionWithDropdownContent--RectatangleMinus -
+                            .dropdownSectionGuests__sectionWithDropdownContent--Number 0
+                            span.dropdownSectionGuests__sectionWithDropdownContent--RectatanglePlus +
+                        .dropdownSectionGuests__button__cleanApply 
+                            .dropdownSectionGuests__button--clean(type="submit") Очистить
+                            .dropdownSectionGuests__button--apply(type="submit") Применить 
+                
+                    // Range slider   
+                    .slider__content
+                        p.slider__text Диапазон цен
+                        .slider__inputs
+                            label(for="slider__input--first")
+                                input#slider__input--first(type="text", name="", placeholder="")
+                                span ₽
+                            span -
+                            label(for="slider__input--second")
+                                input#slider__input--second(type="text", name="", placeholder="")    
+                                span ₽
+                    #slider
+                p.slider__description Стоимость за сутки пребывания в номере
 
-        //section with rules
-        .rules__title правила дома
-        //checkbox section 
-        .choicseListOfCheckBoxes__items
-            .choicseListOfCheckBoxes__list
-                input#choiseCheckbox__item--Smoke.choicseListOfCheckBoxes__item(type="checkbox")
-                label(for="choiseCheckbox__item--Smoke") Можно курить
-            .choicseListOfCheckBoxes__list
-                input#choiseCheckbox__item--Pets.choicseListOfCheckBoxes__item(type="checkbox")
-                label(for="choiseCheckbox__item--Pets") Можно с питомцами
-            .choicseListOfCheckBoxes__list
-                input#choiseCheckbox__item--Guests.choicseListOfCheckBoxes__item(type="checkbox")
-                label(for="choiseCheckbox__item--Guests") Можно пригласить гостей (до 10 человек)
+                //section with rules
+                .rules__title правила дома
+                //checkbox section 
+                .choicseListOfCheckBoxes__items
+                    .choicseListOfCheckBoxes__list
+                        input#choiseCheckbox__item--Smoke.choicseListOfCheckBoxes__item(type="checkbox")
+                        label(for="choiseCheckbox__item--Smoke") Можно курить
+                    .choicseListOfCheckBoxes__list
+                        input#choiseCheckbox__item--Pets.choicseListOfCheckBoxes__item(type="checkbox")
+                        label(for="choiseCheckbox__item--Pets") Можно с питомцами
+                    .choicseListOfCheckBoxes__list
+                        input#choiseCheckbox__item--Guests.choicseListOfCheckBoxes__item(type="checkbox")
+                        label(for="choiseCheckbox__item--Guests") Можно пригласить гостей <br> (до&nbsp;10&nbsp;человек)
+                //availability
+                .availability__numbers 
+                    p Доступность
+                    //rich checkbox item
+                    .richCheckBox__section 
+                        .richCheckBox__section--item 
+                            input#richCheckBox__section--checkBoxFirst(type="checkbox")
+                            label(for="richCheckBox__section--checkBoxFirst") Широкий коридор
+                            p Ширина коридоров в номере не менее 91 см.
+                        .richCheckBox__section--item 
+                            input#richCheckBox__section--checkBoxSecond(type="checkbox")
+                            label(for="richCheckBox__section--checkBoxSecond") Помощник для инвалидов
+                            p На&nbsp;1&nbsp;этаже вас встретит специалист и&nbsp;проводит до&nbsp;номера.
+                
+                //facilities
+                .facilities__container
+                    p удобства номера 
+                    //dropdown choise fild
+                    .dropdownSection
+                        button.dropDown__button
+                            .dropDown__button--text 2 спальни 2 кровати
+                            img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
+                        .dropDown__sectionWithDropdownContent
+                            .dropDown__sectionWithDropdownContent--item
+                                p.dropDown__sectionWithDropdownContent--text спальни 
+                                span.dropDown__sectionWithDropdownContent--RectatangleMinus -
+                                .dropDown__sectionWithDropdownContent--Number 0
+                                span.dropDown__sectionWithDropdownContent--RectatanglePlus +
+                            .dropDown__sectionWithDropdownContent--item
+                                p.dropDown__sectionWithDropdownContent--text кровати 
+                                span.dropDown__sectionWithDropdownContent--RectatangleMinus -
+                                .dropDown__sectionWithDropdownContent--Number 0
+                                span.dropDown__sectionWithDropdownContent--RectatanglePlus +
+                            .dropDown__sectionWithDropdownContent--item
+                                p.dropDown__sectionWithDropdownContent--text ванные комнаты 
+                                span.dropDown__sectionWithDropdownContent--RectatangleMinus -
+                                .dropDown__sectionWithDropdownContent--Number 0
+                                span.dropDown__sectionWithDropdownContent--RectatanglePlus +
+                            .dropdownSectionGuests__button__cleanApplyItem
+                                .dropdownSectionGuests__button--cleanItem(type="submit") Очистить
+                                .dropdownSectionGuests__button--applyItem(type="submit") Применить
+                
+                
+                // Checkbox choise field 
+                .choiseCheckbox
+                     
+                    button.choiseCheckbox__button(type="submit", value="") дополнительные удобства
+                        img(src="./img_website/expand_more.svg", alt="dropdovn")
+                    .choicseListOfCheckBoxes
+                        .choicseListOfCheckBoxes__list
+                            input#choiseCheckbox__item0.choicseListOfCheckBoxes__item(type="checkbox")
+                            label(for="choiseCheckbox__item0") Завтрак
+                        .choicseListOfCheckBoxes__list
+                            input#choiseCheckbox__item1.choicseListOfCheckBoxes__item(type="checkbox")
+                            label(for="choiseCheckbox__item1") Письменный стол
+                        .choicseListOfCheckBoxes__list
+                            input#choiseCheckbox__item2.choicseListOfCheckBoxes__item(type="checkbox")
+                            label(for="choiseCheckbox__item2") Стул для кормления
+                        .choicseListOfCheckBoxes__list
+                            input#choiseCheckbox__item3.choicseListOfCheckBoxes__item(type="checkbox")
+                            label(for="choiseCheckbox__item3") Кроватка
+                        .choicseListOfCheckBoxes__list
+                            input#choiseCheckbox__item4.choicseListOfCheckBoxes__item(type="checkbox")
+                            label(for="choiseCheckbox__item4") Телевизор
+                        .choicseListOfCheckBoxes__list
+                            input#choiseCheckbox__item5.choicseListOfCheckBoxes__item(type="checkbox")
+                            label(for="choiseCheckbox__item5") Шампунь
 
-        .content__container 
+        
+            .content__container 
+                h2.content__title Номера, которые мы для вас подобрали
+                .apartment__container 
+                    //**********apartment section******
+                    mixin apartment
+                        .apartment 
+                            .apartment__slider
+                                button.prev__img(type= "button")
+                                    img(src= "./img_website/prev.png")
+                                .apartment__sleder--gallery
+                                    div#listItems
+                                button.next__img(type= "button")
+                                    img(src="./img_website/next.png")
+                                .apartment__slider--quantity
+                                    span.apartment__slider--quantityRectangle#rectangle 
+                                    span.apartment__slider--quantityRectangle#rectangle 
+                                    span.apartment__slider--quantityRectangle#rectangle
+                                    span.apartment__slider--quantityRectangle#rectangle
+                            .apartment__info 
+                                p.apartment__info--number 
+                                    span.apartment__info--simbol №
+                                    span.numberOfaparture 888 
+                                    span.view люкс
+                                p.apartment__info--price 9 990₽ 
+                                    span.apartment__info--priceIn в сутки
+
+                            hr.apartment__line
+
+                            .apartment__mention 
+                                .apartment__mention--star 
+                                    mixin starRating(typeOf, idOf, name, valueOf)
+                                        input(type =""+typeOf, id =""+idOf, name =""+nameOf, value =""+valueOf)
+                                    mixin labelForStar(numberOf, titleOf)
+                                        label(for =""+numberOf, title =""+titleOf)
+                                    +starRating("radio", "star_5", "rating", "5")
+                                    +labelForStar("star_5", "Оценка 5")
+                                    +starRating("radio", "star_4", "rating", "4")
+                                    +labelForStar("star_4", "Оценка 4")
+                                    +starRating("radio", "star_3", "rating", "3")
+                                    +labelForStar("star_3", "Оценка 3")
+                                    +starRating("radio", "star_2", "rating", "2")
+                                    +labelForStar("star_2", "Оценка 2")
+                                    +starRating("radio", "star_1", "rating", "1")
+                                    +labelForStar("star_1", "Оценка 1")
+                                .apartment__mention--numbers
+                                    p.apartment__mention--numbersMention 145 Отзывов
+                    .apartment 
+                        +apartment
+                    .apartment 
+                        +apartment
+                    .apartment
+                        +apartment 
+                    .apartment
+                        +apartment
+                    .apartment
+                        +apartment
+                    .apartment
+                        +apartment
+                    .apartment
+                        +apartment
+                    .apartment
+                        +apartment
+                    .apartment
+                        +apartment
+                    .apartment
+                        +apartment
+                    .apartment
+                        +apartment
+                    .apartment
+                        +apartment
+                //pagination
+                .pagination
+                    ul.pagination__list
+                        li.pagination__list--item
+                            a(href="#") 1
+                        li.pagination__list--item
+                            a(href="#") 2
+                        li.pagination__list--item
+                            a(href="#") 3
+                        li.pagination__list--item
+                            a(href="#") ...
+                        li.pagination__list--item
+                            a(href="#") 50
+                    .pagination__button
+                        span
+                            svg
+                                path(width="40" height="40" d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z" fill="white")
+                .pagination__text 
+                    p 1 – 12 из 100+ вариантов аренды 
 
         //footer 
         .footer__container 
@@ -245,7 +401,66 @@ html(lang="en")
                 a.footer__links--item(href="#")
                     img(src="./img_website/inst.svg", alt="") 
 
+        //***********Third page************
+        .page__delimiter
+        //Header without person
+        .header__container--general
+            .header__container 
+                img.header__logo(src="./img_website/logo.svg", alt="")
+                .header__list--container
+                    ul.header__list 
+                        li.header__list--item О нас
+                        li.header__list--item Услуги
+                            img(src="./img_website/expand_more.svg", alt="")
+                        li.header__list--item Вакансии
+                        li.header__list--item Новости
+                        li.header__list--item Соглашения
+                            img(src="./img_website/expand_more.svg", alt="")
+                .signIn__button--container
+                    .signIn__button 
+                        p войти
+                .registration__button 
+                    p зарегестрироваться 
 
+        //footer 
+        .footer__container 
+            .footer__logo 
+                img.header__logo(src="./img_website/logo.svg", alt="")
+                p.heder__description Бронирование номеров в&nbsp;лучшем отеле 2019 года по&nbsp;версии ассоциации &laquo;Отельные взгляды&raquo;
+            .footer__list--container 
+                ul.footer__list
+                    li.footer__list--item Навигация
+                    li.footer__list--item О нас
+                    li.footer__list--item Новости
+                    li.footer__list--item Служба поддержки
+                    li.footer__list--item Услуги
+                ul.footer__list
+                    li.footer__list--item О нас
+                    li.footer__list--item О сервисе
+                    li.footer__list--item Наша команда
+                    li.footer__list--item Вакансии
+                    li.footer__list--item Инвесторы
+                ul.footer__list
+                    li.footer__list--item Служба поддержки
+                    li.footer__list--item Согашения
+                    li.footer__list--item Сообщества
+                    li.footer__list--item Связь с нами
+            .footer__subscription
+                p.footer__subscription--title подписка
+                p.footer__subscription--description Получайте специальные предложения и новости сервиса
+                .email__button 
+                    p Email 
+                    img(src="./img_website/arrow_forward.svg", alt="")
+        .footer__container--copyriting
+            .copyriting
+                p Copyright © 2018 Toxin отель. Все права защищены.
+            .footer__links 
+                a.footer__links--item(href="#")
+                    img(src="./img_website/tw.svg", alt="") 
+                a.footer__links--item(href="#")
+                    img(src="./img_website/fb.svg", alt="") 
+                a.footer__links--item(href="#")
+                    img(src="./img_website/inst.svg", alt="") 
     script(src="./js/jquery.js") 
     script(src="./js/air-datepicker.js")
     script(src="./js/nouislider.js") 

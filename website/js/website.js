@@ -21,19 +21,19 @@
 
 
 //Dropdown content for section choise sum of beds, bathrooms 
-// let count = 0;
-// document.querySelector('.dropDown__button').addEventListener('click', () => {  
-//     let topBlock = document.querySelector('.dropDown__sectionWithDropdownContent');
-//     if (count % 2 == 0){
-//         topBlock.style.marginTop = '0';
-//         topBlock.style.display = 'block';
-//         count++;
-//     }
-//     else {
-//         topBlock.style.display = 'none';
-//         count--;
-//     }
-// });
+let count = 0;
+document.querySelector('.dropDown__button').addEventListener('click', () => {  
+    let topBlock = document.querySelector('.dropDown__sectionWithDropdownContent');
+    if (count % 2 == 0){
+        topBlock.style.marginTop = '0';
+        topBlock.style.display = 'block';
+        count++;
+    }
+    else {
+        topBlock.style.display = 'none';
+        count--;
+    }
+});
 
 //Dropdown content for section choise checkbox with guests 
 //calck of bedrooms
@@ -111,19 +111,19 @@ sumOfBedrooms.addEventListener('click', () => {
 
 
 //Dropdown content for section choise checkbox with breackfast
-// let countButtonCheckBox = 0;
-// document.querySelector('.choiseCheckbox__button').addEventListener('click', () => {  
-//     let checkBoxBlock = document.querySelector('.choicseListOfCheckBoxes');
-//     if (countButtonCheckBox % 2 == 0){
-//         checkBoxBlock.style.marginTop = '0';
-//         checkBoxBlock.style.display = 'block';
-//         countButtonCheckBox++;
-//     }
-//     else {
-//         checkBoxBlock.style.display = 'none';
-//         countButtonCheckBox--;
-//     }
-// });
+let countButtonCheckBox = 0;
+document.querySelector('.choiseCheckbox__button').addEventListener('click', () => {  
+    let checkBoxBlock = document.querySelector('.choicseListOfCheckBoxes');
+    if (countButtonCheckBox % 2 == 0){
+        checkBoxBlock.style.marginTop = '0';
+        checkBoxBlock.style.display = 'block';
+        countButtonCheckBox++;
+    }
+    else {
+        checkBoxBlock.style.display = 'none';
+        countButtonCheckBox--;
+    }
+});
 
 //Dropdown content for section choise checkbox with guests
 let countGuestSection = 0;
@@ -203,17 +203,17 @@ minusRectangel.forEach (function(elem, index) {
 
 
 
-//pagination
-// let buttonNextCount = 0;
-// const buttonNext = document.querySelector('.pagination__button');
-// let paginationItem = document.querySelectorAll('.pagination__list--item a');
-// buttonNext.addEventListener('click', () => {
-//     paginationItem[buttonNextCount].style.display = 'none';
-//     buttonNextCount++;
-//     paginationItem[buttonNextCount].style.color = "white";
-//     paginationItem[buttonNextCount].style.left = "215px";
+pagination
+let buttonNextCount = 0;
+const buttonNext = document.querySelector('.pagination__button');
+let paginationItem = document.querySelectorAll('.pagination__list--item a');
+buttonNext.addEventListener('click', () => {
+    paginationItem[buttonNextCount].style.display = 'none';
+    buttonNextCount++;
+    paginationItem[buttonNextCount].style.color = "white";
+    paginationItem[buttonNextCount].style.left = "215px";
     
-// });
+});
 
 
 //toogle section
@@ -265,40 +265,47 @@ minusRectangel.forEach (function(elem, index) {
 
 
 
-// const slyderDir = ['room', 'room1', 'room3'];
-// const urlImage = "url(./img/"
-// const pngImage = ".png)";
-
-// slyderContainer.style.backgroundImage = urlImage + slyderDir[0] + pngImage;
-// document.querySelector('.next__img').addEventListener('click', nextclickButton);
-// document.querySelector('.prev__img').addEventListener('click', prevclickButton);
-// let count = 0;
 
 
-// function nextclickButton(){
-//   document.querySelector('.prev__img').disabled = false;
-//   count++;
-//   if (count < slyderDir.length) {
-//     document.querySelector('#listItems').style.backgroundImage = urlImage + slyderDir[count] + pngImage;
-//     rectangleImg[count].style.backgroundColor = 'white';
-//   }
-//   if (count == slyderDir.length) {
-//     document.querySelector('.next__img').disabled = true;
-//   }
-// }
-// console.log(count);
 
-// function prevclickButton(){
-//   document.querySelector('.next__img').disabled = false;
-
-//   count--
-//   if (count > 0) {
-//     document.querySelector('#listItems').style.backgroundImage = urlImage + slyderDir[count] + pngImage;
-//     rectangleImg[count].style.backgroundColor = '';
-//   }
-//   else if (count == 0) {
-//     document.querySelector('.prev__img').disabled = true;
-//   }
-// }
+//***********apartment section*******
+let slyderContainer = document.querySelector('#listItems');
+let rectangleImg = document.querySelectorAll('#rectangle');
 
 
+
+const slyderDir = ['room', 'room1', 'room3'];
+const urlImage = "url(./img/slider/"
+const pngImage = ".png)";
+
+slyderContainer.style.backgroundImage = urlImage + slyderDir[0] + pngImage;
+document.querySelector('.next__img').addEventListener('click', nextclickButton);
+document.querySelector('.prev__img').addEventListener('click', prevclickButton);
+let countApart = 0;
+
+
+function nextclickButton(){
+  document.querySelector('.prev__img').disabled = false;
+  countApart++;
+  if (countApart < slyderDir.length) {
+    document.querySelector('#listItems').style.backgroundImage = urlImage + slyderDir[countApart] + pngImage;
+    rectangleImg[countApart].style.backgroundColor = 'white';
+  }
+  if (countApart == slyderDir.length) {
+    document.querySelector('.next__img').disabled = true;
+  }
+}
+console.log(count);
+
+function prevclickButton(){
+  document.querySelector('.next__img').disabled = false;
+
+  countApart--
+  if (countApart > 0) {
+    document.querySelector('#listItems').style.backgroundImage = urlImage + slyderDir[countApart] + pngImage;
+    rectangleImg[countApart].style.backgroundColor = '';
+  }
+  else if (countApart == 0) {
+    document.querySelector('.prev__img').disabled = true;
+  }
+}

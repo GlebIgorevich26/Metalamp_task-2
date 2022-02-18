@@ -1,3 +1,7 @@
+$width__button: 44px
+$width__img: 270px
+$height__img: 150px
+    
 // list-reset intended for reset all browser styles  
 list-reset 
     margin: 0
@@ -261,7 +265,7 @@ body
 .dropdownSectionGuests__button
     margin-top: 8px
     @include allStrings
-    width: 320px
+    width: 266px
     height: 44px
     display: flex
     justify-content: space-around
@@ -517,12 +521,46 @@ body
     height: 100px
     background: #E5E5E5
 
+.container__nav--left
+    padding-top: 30px
+    padding-left: 130px
+
 .conteiner__general
+    background-color: #fff
     display: flex
+
+.arrival__title,
+.dropdownSectionGuests__second--title,
+.rules__title,
+.availability__numbers p,
+.facilities__container p,
+.facilities__container p,
+.slider__text
+    padding: 0
+    margin: 0
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #1F2041
+
+
+.dropdownSectionGuests__second--title
+    margin-top: 20px
+
+.slider__content
+    margin-top: 30px
+
+#slider
+    margin-top: 20px
+
+.rules__title
+    margin-top: 35px
 
 //styling date section
 .filterDate-item
-    width: 320px
+    width: 266px
     height: 44px
     background-image: url("../img_website/expand_more.svg")
     background-repeat: no-repeat
@@ -539,7 +577,6 @@ body
     font-family: 'Montserrat-Regular'
     font-style: normal
     font-weight: bold
-    margin-top: 150px
     display: flex
     justify-content: space-between
     width: 266px
@@ -549,6 +586,7 @@ body
     color: #1F2041
     font-size: 12px
     line-height: 15px
+    
 
     
 .slider__inputs
@@ -562,10 +600,9 @@ body
         color: rgba(31, 32, 65, 0.5)
 
 .slider__text
-    display: block
     margin: 0
     padding: 0
-
+    display: block
 
 #slider__input--first,
 #slider__input--second
@@ -616,11 +653,17 @@ body
     :first-child
         border-right: 1px solid white
 
+.slider__description
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    color: rgba(31, 32, 65, 0.5)
 //section with rules
-// Dropdown section with checkboxes
+//Dropdown section with checkboxes
 
 .choiseCheckbox
-    margin-top: 200px
     position: relative
 
 .choiseCheckbox__button
@@ -655,8 +698,8 @@ body
 .choicseListOfCheckBoxes__item+label::before
     content: ''
     display: inline-block
-    width: 1em
-    height: 1em
+    width: 20px
+    height: 20px
     flex-shrink: 0
     flex-grow: 0
     border: 1px solid rgba(31, 32, 65, 0.25)
@@ -678,12 +721,17 @@ body
 
 .choicseListOfCheckBoxes__list
     label
-        font-family: Montserrat
+        font-family: 'Montserrat-Regular'
         font-style: normal
         font-weight: normal
         font-size: 14px
         line-height: 18px
         color: rgba(31, 32, 65, 0.5)
+
+.choicseListOfCheckBoxes__list
+    label:nth-child(2)
+        margin-top: 10px
+
 
 
 .choiseCheckbox__button img
@@ -698,3 +746,465 @@ body
     position: absolute
     margin-top: -130px
     display: none
+
+
+//rich choiseBox section
+.availability__numbers p
+    margin-top: 25px
+
+.richCheckBox__section
+    margin-top: 18px
+    width: 266px
+    height: 145px
+.richCheckBox__section--item p
+    padding: 0
+    margin: 0
+    padding-left: 20px
+    font-family: 'Montserrat-Regular'
+    font-size: 12px
+    line-height: 14px
+    color: rgba(31, 32, 65, 0.5)
+
+.richCheckBox__section--item label
+    padding-left: 5px
+    font-family: 'Montserrat-ExtraBold'
+    font-weight: bold
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.75)
+
+#richCheckBox__section--checkBoxFirst,
+#richCheckBox__section--checkBoxSecond
+    width: 18px
+    height: 18px
+
+
+// Dropdown section with elements  beds, rooms  
+.dropdownSection
+    @include allStrings
+    position: relative
+    border: none
+    
+.dropDown__button
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+    @include allStrings
+    width: 266px
+    height: 44px
+    display: flex
+    justify-content: space-around
+
+.dropDown__button--text
+    margin: 0
+    padding-top: 5%
+      
+.dropDown__button--icon
+    padding: 0
+    margin: 0
+    width: 15px
+    padding-top: 5%
+    padding-left: 20%
+
+
+.dropDown__sectionWithDropdownContent
+    position: absolute
+    margin-top: -170px
+    margin-left: 0
+    @include allStrings
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    display: grid
+    background-color: #fff
+    width: 266px
+    height: auto
+    overflow: hidden
+    display: none
+    text-transform: uppercase
+   
+
+.dropDown__sectionWithDropdownContent--item
+    display: flex
+    justify-content: space-between
+    padding: 5px 15px
+    
+
+.dropDown__sectionWithDropdownContent--item p
+    flex: 1
+    margin: 0
+    margin-top: 5%
+
+
+.dropDown__sectionWithDropdownContent--item span 
+    margin: 0
+    margin-top: 2.5%
+    width: 30px
+    height: 30px
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 22px
+    text-align: center
+    padding-top: 2.5%
+    
+.dropDown__sectionWithDropdownContent--Number
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    width: 20px
+    height: 20px
+    text-align: center
+    padding-top: 5%  
+    
+.dropdownSectionGuests__button__cleanApplyItem
+    display: flex
+    justify-content: space-between
+
+.dropdownSectionGuests__button--cleanItem,
+.dropdownSectionGuests__button--applyItem
+    padding: 15px
+    background-color: #fff
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    text-transform: uppercase
+    color: #BC9CFF
+
+
+//*********** apartment section ***********
+
+.content__container
+    margin-left: 58px
+    margin-top: 10px
+
+.content__title
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 29px
+    color: #1F2041
+
+
+
+.apartment__container  
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+    grid-column-gap: 10px
+    grid-row-gap: 10px 
+
+
+
+
+.apartment 
+    position: relative
+    width: 270px
+    height: 257px
+    background: #FFFFFF
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+    border-radius: 4px
+
+.apartment__sleder--gallery
+    img
+        width: $width__img
+        height: $height__img
+        border-radius: 2% 2% 0 0
+
+.apartment__sleder--gallery
+    li:last-child
+        display: none
+
+.apartment__sleder--gallery
+    ul
+        padding: 0
+        margin: 0
+
+
+.apartment__slider
+    position: relative
+    overflow: hidden
+
+
+.apartment__slider
+    img
+        display: block
+
+
+.apartment__slider
+    li
+        list-style-type: none
+        display: inline-block
+
+#listItems
+    background-image: "./img/slider/room1.png"
+    content: ''
+    overflow: hidden
+    width: $width__img
+    height: $height__img
+    border-radius: 2% 2% 0 0 
+    transition: all 1s ease-out	
+
+.prev__img
+    position: absolute
+    top: $height__img / 2
+    left: 12px
+    width: $width__button
+    height: $height__img
+    top: 0
+    border: none
+    background-color: transparent
+
+.apartment__slider--quantityRectangle
+    display: inline
+    position: absolute
+    left: $width__img - 20px
+    top: $height__img - 21px
+    letter-spacing: 15px
+    width: 5px
+    height: 5px
+    border: 1px solid #fff
+    border-radius: 50%
+
+.apartment__slider--quantity
+    transition: all 1s ease-out
+
+.apartment__slider--quantity
+    :nth-child(1)
+        left: $width__img - 57px
+        background-color: #fff
+
+.apartment__slider--quantity
+    :nth-child(2)
+        left: $width__img - 45px
+
+.apartment__slider--quantity
+    :nth-child(3)
+        left: $width__img - 34px
+
+.apartment__slider--quantity
+    :nth-child(4)
+        left: $width__img - 23px
+
+.next__img
+    position: absolute
+    width: $width__button
+    height: $height__img
+    left: $width__img - 35px
+    top: 0
+    border: none
+    background-color: transparent
+
+.apartment__info 
+    display: flex
+    justify-content: space-between
+
+.apartment__mention
+    display: flex
+    justify-content: space-between
+
+.apartment__info--number
+    position: relative
+    top: 5px
+    left: 18px
+
+.apartment__info--simbol
+    width: 59px
+    height: 24px
+    font-family: Montserrat-Regular
+    font-weight: bold
+    font-size: 14px
+    line-height: 17px
+    color: #1F2041
+
+.apartment__info--number .numberOfaparture
+    position: relative
+    left: 5px
+    width: 59px
+    height: 24px
+    font-family: Montserrat-Regular
+    font-weight: bold
+    font-size: 20px
+    line-height: 17px
+    color: #1F2041
+
+.apartment__info--number .view
+    font-family: Montserrat-Regular
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #BC9CFF
+
+.apartment__info--price
+    position: relative
+    top: 20px
+    left: -20px
+    margin: 0
+    font-family: Montserrat-Regular
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.5)
+
+.apartment__info--priceIn
+    margin: 0
+    font-family: Montserrat-Regular
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.5)
+
+
+.apartment__line
+    position: relative
+    left: 20px
+    margin: 0
+    padding: 0
+    width: 230px
+    height: 1px
+    background: rgba(31, 32, 65, 0.1)
+
+// In this area begin star rating section
+
+.apartment__mention--star
+    position: relative
+    display: inline-flex
+    flex-direction: row-reverse
+    left: 20px
+    top: 6px
+
+
+.apartment__mention--star:not(:checked) > input
+    display: none
+
+.apartment__mention--star:not(:checked) > label
+    float: left
+    height: 24px
+    padding: 0
+    cursor: pointer
+    font-size: 24px
+    line-height: 24px
+    letter-spacing: 4px
+    color: white
+    text-shadow: 1px 1px rgba(188, 156, 255, 1), -1px -1px rgba(188, 156, 255, 1)
+	
+
+
+.apartment__mention--star:not(:checked) > label:before
+    content: '★'
+
+
+.apartment__mention--star > input:checked ~ label
+    color: rgba(188, 156, 255, 1)
+    text-shadow: 1px 1px #c60
+
+
+.apartment__mention--star:not(:checked) > label:hover
+.apartment__mention--star:not(:checked) > label:hover ~label
+    color: rgba(188, 156, 255, 1)
+
+.apartment__mention--star > input:checked + label:hover
+.apartment__mention--star > input:checked + label:hover ~ label
+.apartment__mention--star > input:checked ~ label:hover
+.apartment__mention--star > input:checked ~ label:hover ~ label
+.apartment__mention--star > input:hover ~ input:checked ~ label
+    color: rgba(188, 156, 255, 1)
+    text-shadow: 1px 1px goldenrod
+
+.apartment__mention--star > label:active
+    position: relative
+
+
+.apartment__mention--numbersMention
+    position: relative
+    top: 8px
+    left: -20px
+    margin: 0
+    font-family: Montserrat-Regular
+    font-style: normal
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.5)
+
+
+/* pagination */
+.pagination
+    width: 230px
+    margin-top: 40px
+    display: flex
+    justify-content: space-between
+
+
+.pagination__list 
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: space-between
+    
+.pagination__list--item 
+    list-style-type: none
+
+.pagination__list--item a
+    text-decoration: none
+
+.pagination__list--item:first-child 
+    position: relative
+    display: block
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 100%
+    width: 40px
+    height: 40px
+   
+.pagination__list--item:first-child a
+    color: white
+    display: block
+    padding-top: 10px
+    padding-left: 15px
+    text-decoration: none
+
+.pagination__list--item:not(:first-child) a
+    position: absolute
+    display: block
+    padding-top: 10px
+    left: 18%
+    color: rgba(31, 32, 65, 0.5)
+
+.pagination__list--item:nth-child(3) a
+    left: 25%
+.pagination__list--item:nth-child(4) a
+    left: 35%
+.pagination__list--item:nth-child(5) a
+    left: 48%
+
+.pagination__button span
+    
+    display: block
+    position: relative
+    width: 40px
+    height: 40px
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    border-radius: 22px
+
+.pagination__button span svg
+    position: absolute
+    width: 20px
+    height: 20px
+    top: 12px
+    left: 10px
+
+.pagination__text
+    width: 229px
+    height: 24px
+.pagination__text p
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    color: rgba(31, 32, 65, 0.75)
