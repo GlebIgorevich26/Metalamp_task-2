@@ -21,6 +21,7 @@ btn-reset
     cursor: pointer
   
 //**********Fonts****************
+
 @font-face 
     font-family: 'Montserrat-Regular'
     src: url('../fonts/Montserrat-Regular.woff') format('woff')
@@ -53,12 +54,18 @@ btn-reset
     border-radius: 2px 
 
 @mixin fontFace
-    font-family: Montserrat
+    font-family: 'Montserrat-Regular'
     font-style: normal
     font-weight: normal
     font-size: 14px
     line-height: 18px
     color: rgba(31, 32, 65, 0.25) 
+
+@mixin allStringLine
+    width: 100vw
+    margin-left: calc(-50vw + 50%)
+
+
 
 
 body
@@ -68,23 +75,23 @@ body
 //header without signIn 
 
 .header__container--general
-    width: 100vw
-    margin-left: calc(-50vw + 50%)
+    @include allStringLine
     height: 70px
     background: #FFFFFF
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
     
 
 .header__container
-    padding-left: 8.5%
+    padding-left: 100px
     display: flex
 
 .header__logo
     padding-top: 0.9%
+    padding-left: 52px
 
 .header__list--container
-    padding-top: 1.8%
-    padding-left: 18.5%
+    padding-top: 24px
+    padding-left: 265px
 
 .header__list
     list-style-type: none
@@ -98,9 +105,6 @@ body
     font-size: 14px
     line-height: 17px
     color: rgba(31, 32, 65, 0.5)
-
-.header__list--item:nth-child(1)
-    font-family: 'Montserrat-ExtraBold'
 
 .header__list--item:nth-child(2)
     margin-left: 5px
@@ -129,9 +133,7 @@ body
 
 
 .signIn__button
-
-    position: absolute
-    
+    position: absolute 
     width: 83px
     height: 30px
     top: 2px
@@ -156,7 +158,6 @@ body
 .registration__button
     margin-left: 22px
     margin-top: 14px
-  
     width: 196px
     height: 34px
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
@@ -176,21 +177,22 @@ body
 
 
 //image container
+
 .container__img 
-    height: 1022px
+    height: 826px
     background-image: url("../img/site_image.svg")
     background-repeat: no-repeat
     background-size: cover
-    width: 100vw
-    margin-left: calc(-50vw + 50%)
+    @include allStringLine
     
 
 
 //container form numbers
+
 .room__numbers--container 
     position: absolute   
-    top: 150px
-    left: 130px
+    top: 140px
+    left: 140px
     width: 380px
     height: 374px
     background: #fff
@@ -200,6 +202,7 @@ body
     border-radius: 4px
 
 //form title
+
 .room__numbers--title
     padding-top: 13px
     margin-bottom: 0
@@ -214,9 +217,10 @@ body
 
 
 //styling date arrive and date departure
+
 .dropdown-date__wrapper
     padding-left: 30px
-    padding-top: 20px
+    padding-top: 24px
     display: flex
     justify-self: start
 
@@ -261,7 +265,7 @@ body
 .dropdownSectionGuests p
     margin: 0
     padding: 0
-    padding-top: 14px
+    padding-top: 18px
     font-family: 'Montserrat-ExtraBold'
     font-weight: bold
     font-size: 12px
@@ -270,24 +274,31 @@ body
     color: #1F2041
 
 .dropdownSectionGuests__button
-    margin-top: 8px
+    margin-top: 10px
     @include allStrings
-    width: 266px
+    width: 320px
     height: 44px
     display: flex
-    justify-content: space-around
+    justify-content: start
 
 .dropdownSectionGuests__button--text
-    @include fontFace 
+
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.75)
     margin: 0
     padding-top: 3%
+    padding-left: 10px
       
 .dropDown__button--icon
     padding: 0
     margin: 0
-    width: 15px
-    padding-top: 5%
-    padding-left: 50%
+    width: -19px
+    padding-top: 16px
+    padding-left: 30px
 
 .dropdownSectionGuests__sectionWithDropdownContent
     position: absolute
@@ -357,6 +368,7 @@ body
 
 
 //pick up button
+
 .pickUp__button--container 
     margin-top: 74px
     margin-left: 30px
@@ -382,19 +394,19 @@ body
     width: 18px
     height: 18px
 
-//footer
-.footer__container 
-    width: 100vw
-    margin-left: calc(-50vw + 50%)
-    display: flex
+//*******************footer start*********************
 
+.footer__container 
+    @include allStringLine
+    display: flex
     height: 372px
     background: #FFFFFF
+    border-top: 1px solid rgba(31, 32, 65, 0.25)
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1)
 
 .footer__logo 
-    margin-left: 138px
-    margin-top: 99px
+    margin-left: 145px
+    margin-top: 105px
     width: 260px
     height: 132px
 
@@ -404,8 +416,6 @@ body
 .footer__list--container
     display: flex
     margin-top: 104px
-
-    
 
 .footer__list
     margin-left: 44px
@@ -459,6 +469,7 @@ body
     color: rgba(31, 32, 65, 0.75)
 
 .footer__subscription--title
+    padding-top: 4px
     width: 76px
     height: 15px
     font-family: 'Montserrat-Regular'
@@ -494,11 +505,11 @@ body
 
 
 //footer copyriting
+
 .footer__container--copyriting
+    @include allStringLine
     display: flex
     justify-content: start
-    width: 100vw
-    margin-left: calc(-50vw + 50%)
     height: 70px
     background: #FFFFFF
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
@@ -521,6 +532,17 @@ body
 .footer__links--item:nth-child(3)
     margin-left: 22px
 
+//***********footer end************
+
+
+
+
+
+
+
+
+
+
 
 //***********Second page********
 
@@ -529,12 +551,19 @@ body
     background: #E5E5E5
 
 .container__nav--left
-    padding-top: 30px
-    padding-left: 130px
+    padding-top: 32px
+    padding-left: 144px
 
 .conteiner__general
+    @include allStringLine
     background-color: #fff
     display: flex
+
+.dropdownButton__bads
+    margin-top: 10px
+
+.facilities__comfort
+    margin-top: 10px
 
 .arrival__title,
 .dropdownSectionGuests__second--title,
@@ -556,6 +585,34 @@ body
 .dropdownSectionGuests__second--title
     margin-top: 20px
 
+.dropdownSectionGuests__button--secondPage
+    display: flex
+    justify-content: start
+    width: 266px
+    height: 44px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+
+.dropDown__button--iconSecond
+    padding-left: 80px
+    padding-top: 16px
+    font-size: 24px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.5)
+
+.dropdownSectionGuests__button--textSecond
+    display: block
+    padding-left: 13px
+    padding-top: 9px
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
 .slider__content
     margin-top: 30px
 
@@ -566,7 +623,10 @@ body
     margin-top: 35px
 
 //styling date section
+
 .filterDate-item
+    margin-top: 5px
+    padding-left: 12px
     width: 266px
     height: 44px
     background-image: url("../img_website/expand_more.svg")
@@ -616,7 +676,7 @@ body
     width: 30px
     height: auto
     border: none
-    font-family: Montserrat
+    font-family: 'Montserrat-Regular'
     font-style: normal
     font-weight: normal
     text-align: right
@@ -626,6 +686,7 @@ body
 
 
 //Slider range styling
+
 .noUi-connect
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
 
@@ -667,6 +728,8 @@ body
     font-size: 12px
     line-height: 14px
     color: rgba(31, 32, 65, 0.5)
+
+
 //section with rules
 //Dropdown section with checkboxes
 
@@ -674,7 +737,7 @@ body
     position: relative
 
 .choiseCheckbox__button
-    font-family: Montserrat
+    font-family: 'Montserrat-ExtraBold'
     font-style: normal
     font-weight: bold
     font-size: 12px
@@ -690,6 +753,7 @@ body
     width: 266px
     height: auto
     padding-left: 1%
+    padding-top: 30px
 
 .choicseListOfCheckBoxes__item
     position: absolute
@@ -756,6 +820,7 @@ body
 
 
 //rich choiseBox section
+
 .availability__numbers p
     margin-top: 25px
 
@@ -763,30 +828,75 @@ body
     margin-top: 18px
     width: 266px
     height: 145px
+
+#richCheckBox__section--checkBoxSecond,
+#richCheckBox__section--checkBoxFirst
+    width: 10px
+    height: 10px
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+
+
+#richCheckBox__section--checkBoxSecond+label::before,
+#richCheckBox__section--checkBoxFirst+label::before
+    content: ''
+    display: inline-block
+    width: 20px
+    height: 20px
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    margin-right: 0.5em
+
+    background-size: 50% 50%
+
+#richCheckBox__section--checkBoxSecond:checked+label::before,
+#richCheckBox__section--checkBoxFirst:checked+label::before
+    background: #FFFFFF
+    border: 1px solid #BC9CFF
+    box-sizing: border-box
+    border-radius: 4px
+    background-image: url("../img_website/v.svg")
+    background-repeat: no-repeat
+    background-position: center
+
+
+.richCheckBox__section--item
+    padding-top: 10px
+
 .richCheckBox__section--item p
     padding: 0
     margin: 0
-    padding-left: 20px
+    width: 226px
+    padding-top: 5px
+    text-transform: initial
+    padding-left: 27px
+    padding-top: 5px
     font-family: 'Montserrat-Regular'
     font-size: 12px
     line-height: 14px
     color: rgba(31, 32, 65, 0.5)
 
 .richCheckBox__section--item label
-    padding-left: 5px
+
     font-family: 'Montserrat-ExtraBold'
     font-weight: bold
     font-size: 14px
     line-height: 18px
     color: rgba(31, 32, 65, 0.75)
 
-#richCheckBox__section--checkBoxFirst,
-#richCheckBox__section--checkBoxSecond
-    width: 18px
-    height: 18px
-
+#richCheckBox__section--checkBoxSecond+label,
+#richCheckBox__section--checkBoxFirst+label
+    display: inline-flex
+    align-items: center
+    user-select: none
 
 // Dropdown section with elements  beds, rooms  
+
 .dropdownSection
     @include allStrings
     position: relative
@@ -803,19 +913,14 @@ body
     width: 266px
     height: 44px
     display: flex
+    border-radius: 4px
     justify-content: space-around
+    border: 1px solid rgba(31, 32, 65, 0.25)
 
 .dropDown__button--text
     margin: 0
-    padding-top: 5%
-      
-.dropDown__button--icon
-    padding: 0
-    margin: 0
-    width: 15px
-    padding-top: 5%
-    padding-left: 20%
-
+    padding-top: 9px
+ 
 
 .dropDown__sectionWithDropdownContent
     position: absolute
@@ -898,17 +1003,12 @@ body
     line-height: 29px
     color: #1F2041
 
-
-
 .apartment__container  
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(4, 1fr)
     grid-column-gap: 10px
     grid-row-gap: 10px 
-
-
-
 
 .apartment 
     position: relative
@@ -950,7 +1050,7 @@ body
         display: inline-block
 
 #listItems
-    background-image: "./img/slider/room1.png"
+    background-image: url("../img/slider/room3.png")
     content: ''
     overflow: hidden
     width: $width__img
@@ -960,7 +1060,7 @@ body
 
 .prev__img
     position: absolute
-    top: $height__img / 2
+    top: math($height__img, 2)
     left: 12px
     width: $width__button
     height: $height__img
@@ -1054,7 +1154,7 @@ body
     top: 20px
     left: -20px
     margin: 0
-    font-family: Montserrat-Regular
+    font-family: 'Montserrat-Regular'
     font-style: normal
     font-weight: bold
     font-size: 14px
@@ -1063,7 +1163,7 @@ body
 
 .apartment__info--priceIn
     margin: 0
-    font-family: Montserrat-Regular
+    font-family: 'Montserrat-Regular'
     font-style: normal
     font-weight: bold
     font-size: 12px
@@ -1115,14 +1215,14 @@ body
     text-shadow: 1px 1px #c60
 
 
-.apartment__mention--star:not(:checked) > label:hover
-.apartment__mention--star:not(:checked) > label:hover ~label
+.apartment__mention--star:not(:checked) > label:hover,
+.apartment__mention--star:not(:checked) > label:hover ~ label
     color: rgba(188, 156, 255, 1)
 
-.apartment__mention--star > input:checked + label:hover
-.apartment__mention--star > input:checked + label:hover ~ label
-.apartment__mention--star > input:checked ~ label:hover
-.apartment__mention--star > input:checked ~ label:hover ~ label
+.apartment__mention--star > input:checked + label:hover,
+.apartment__mention--star > input:checked + label:hover ~ label,
+.apartment__mention--star > input:checked ~ label:hover,
+.apartment__mention--star > input:checked ~ label:hover ~ label,
 .apartment__mention--star > input:hover ~ input:checked ~ label
     color: rgba(188, 156, 255, 1)
     text-shadow: 1px 1px goldenrod
@@ -1136,16 +1236,19 @@ body
     top: 8px
     left: -20px
     margin: 0
-    font-family: Montserrat-Regular
+    font-family: 'Montserrat-Regular'
     font-style: normal
     font-size: 14px
     line-height: 18px
     color: rgba(31, 32, 65, 0.5)
 
 
-/* pagination */
+//pagination
+
 .pagination
-    width: 230px
+    position: relative
+    width: 241px
+    margin-left: 290px
     margin-top: 40px
     display: flex
     justify-content: space-between
@@ -1158,13 +1261,13 @@ body
     justify-content: space-between
     
 .pagination__list--item 
+    position: absolute
     list-style-type: none
 
 .pagination__list--item a
     text-decoration: none
 
 .pagination__list--item:first-child 
-    position: relative
     display: block
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     border-radius: 100%
@@ -1179,18 +1282,17 @@ body
     text-decoration: none
 
 .pagination__list--item:not(:first-child) a
-    position: absolute
     display: block
     padding-top: 10px
-    left: 18%
+    margin-left: 65px
     color: rgba(31, 32, 65, 0.5)
 
 .pagination__list--item:nth-child(3) a
-    left: 25%
+    margin-left: 100px
 .pagination__list--item:nth-child(4) a
-    left: 35%
+    margin-left: 140px
 .pagination__list--item:nth-child(5) a
-    left: 48%
+    margin-left: 170px
 
 .pagination__button span
     
@@ -1209,8 +1311,11 @@ body
     left: 10px
 
 .pagination__text
+    margin-left: 295px
     width: 229px
     height: 24px
+    margin-bottom: 70px
+
 .pagination__text p
     font-family: 'Montserrat-Regular'
     font-size: 14px
@@ -1218,7 +1323,10 @@ body
 
 
 //****************Page 3*************
+
 .apartment__imformation 
+    padding-top: 70px
+    @include allStringLine
     background-color: #fff
     display: flex
 
@@ -1227,35 +1335,52 @@ body
 
 .header__image
     display: flex
-    width: 100vw
-    margin-left: calc(-50vw + 50%)
+    @include allStringLine
     margin: 0
     padding: 0
     
 
 .header__img--container
-    width: 981px
     height: 485px   
     padding: 0
     margin: 0 
+    
+.header__img--container__right
+    display: flex
+    flex-direction: column-reverse
 
-
-.header_img--container img
+.left__img
     width: 981px
     height: 485px
-    padding: 0
-    margin: 0
+
+.right__top
+    width: 614px
+    height: 243px
+
+.right__bottom
+    width: 614px
+    height: 242px
+
+
 
 //rectangle impressions
+
 .apart__info 
     display: flex
 
 .apart__intelligence--item
     display: flex
 
+.apart__impression
+    margin-left: 120px
+
 .apart__impression--rect 
     display: flex
     position: relative
+
+.apart__impression--info
+    display: flex
+
 
 .rect__left
     position: relative
@@ -1265,6 +1390,36 @@ body
     border-radius: 100% 0 0 100% / 50% 0 0 50%
     background-image: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%)
 
+.apart__intelligence--descr,
+.apart__impression--title,
+.apart__intelligence--title
+    margin: 0
+    padding: 0
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-size: 19px
+    line-height: 23px
+    color: #1F2041
+
+.descr__title
+    padding: 0
+    margin: 0
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-weight: 700
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+.descr__subscribe
+    padding: 0
+    margin: 0
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
 
 .rect__right--top
     position: absolute
@@ -1354,7 +1509,29 @@ body
     :nth-child(4)
         list-style-image: url("../img/four_elipse.png")
     
-    
+
+.apart__rewiew--cont
+    display: flex
+    justify-content: space-between
+    text-align: center
+
+.apart__review--title    
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-weight: 700
+    font-size: 19px
+    line-height: 23px
+    color: #1F2041
+
+.apart__review--comments
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 14px
+    text-align: right
+    color: rgba(31, 32, 65, 0.5)
+
 .apart__impression--item
 
     font-family: 'Montserrat-Regular'
@@ -1366,7 +1543,8 @@ body
 
 
 
-//like button  
+//like button 
+
 .likeButton__choiseBox
     display: flex
     justify-content: start
@@ -1409,8 +1587,6 @@ body
 
 // comment section
 
-
-
 .comment__container--header,
 .comment__container--main
     margin: 0
@@ -1440,12 +1616,14 @@ body
     color: rgba(31, 32, 65, 0.75)
 
 .comment__text
+    width: 654px
     font-family: 'Montserrat-Regular'
     font-size: 14px
     line-height: 24px
     color: rgba(31, 32, 65, 0.75)
 
 //bullet list
+
 .bulletList--items
     font-family: 'Montserrat-Regular'
     font-size: 14px
@@ -1462,33 +1640,442 @@ body
 .cancellation
     width: 341px
     height: 140px
+
+    
 //************right section*****************
 
 .apartment__form--container
     width: 380px
     height: 512px
+    margin-left: 100px
     background: #FFFFFF
     border: 1px solid rgba(0, 0, 0, 0.12)
     box-sizing: border-box
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
     border-radius: 4px
 
+.apartment__form--header
+    display: flex
+    justify-content: start
+    padding-top: 40px
+    padding-left: 30px
+
+.apartment__form--room
+    display: flex
+    justify-content: start
+
+.apartment__form--cost
+    display: flex
+    justify-content: start
+
+.apartment__form--number,
+.apartment__form--item,
+.apartment__form--room,
+.apartment__form--costRoom,
+.apartment__form--costDay
+    padding: 0
+    margin: 0
+
+.apartment__form--number
+    font-family: 'Montserrat-ExtraBold'
+    font-size: 14px
+    line-height: 17px
+    color: #1F2041
+
+.apartment__form--item
+    font-family: 'Montserrat-Regular'
+    font-weight: bold
+    font-size: 20px
+    line-height: 17px
+    color: #1F2041
+    padding-left: 4px
+
+.apartment__form--room
+    font-family: 'Montserrat-ExtraBold'
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #BC9CFF
+    padding-left: 8px
+
+.apartment__form--costRoom
+    font-family: "Montserrat-Regular"
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.5)
+    padding-left: 100px
+
+.apartment__form--costDay
+    font-family: "Montserrat-Regular"
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.5)
+
 
 //*************Four page**********
+
 .four__page--image
+    position: relative
     background-image: url("../img/bg_img.png")
     height: 1022px
     background-repeat: no-repeat
     background-size: cover
     width: 100vw
     margin-left: calc(-50vw + 50%)
+
+.registration__form--container
+    position: absolute
+    top: 17px
+    left: 577px
+    width: 380px
+    height: 646px
+    background: #fff
+    border: 1px solid rgba(0, 0, 0, 0.12)
+    box-sizing: border-box
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+    border-radius: 4px
+
+.registration__form
+    padding-left: 30px
+
+.registration__form--title
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-size: 24px
+    line-height: 29px
+    color: #1F2041
+
+.name__input,
+.surname__input,
+.email__Input--four,
+.password__input--four,
+.birthday__input
+    padding: 0
+    margin: 0
+    width: 320px
+    height: 44px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+
+.name__input--placeholder,
+.surname__input--placeholder,
+.birthday__input--placeholder,
+.email__Input--placeholder,
+.password__input--placeholder
+    margin: 0
+    padding: 0
+    padding-top: 13px
+    padding-left: 15px
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.25)
+
+
+.label__birthday,
+.label__signIn
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #1F2041
+
+// radio buttons choice
+
+.choiceRadioItems
+    margin-top: 40px
+    display: flex
+    justify-content: start
+    font-family: 'Montserrat-Regular'
+    font-size: 14px
+    color: rgba(31, 32, 65, 0.75)
+
+.custom__radiobutton 
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.custom__radiobutton+label 
+    display: inline-flex
+    align-items: center
+    user-select: none
+
+
+.custom__radiobutton+label::before 
+    content: ''
+    display: inline-block
+    width: 20px
+    height: 20px
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    border-radius: 50%
+    margin-right: 0.5em
+    background-repeat: no-repeat
+    background-position-x: 45%
+    background-position-y: 45%
+   
+
+.custom__radiobutton:checked+label::before
+    border: 1px solid #BC9CFF
+    background-image: url("../img_website/rec.svg")
+    color: rgba(31, 32, 65, 0.75)
+
+//toogle button
+
+.toogle__container
+    margin-top: 40px
+    position: relative
+    width: 40px
+    height: 20px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 10px
+
+.toogle_rectangle
+    position: absolute
+    width: 12px
+    height: 12px
+    background: rgba(31, 32, 65, 0.25)
+    border-radius: 10px 
+
+.toogle__container--active
+    border: 1px solid #BC9CFF
+
+.toogle_rectangle--active
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+//custom join toogle
+.choise__toogle
+    display: flex
+
+.label__choise--toogle
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+
+.choiseButton__toogle
+    position: relative
+    width: 40px
+    height: 20px
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    border-radius: 10px
+    margin-top: 40px
+    display: flex
+    justify-content: start
+
+#choiseSpan__toogle
+    top: 2.5px
+    left: 2px
+    display: block
+    position: absolute
+    width: 15px
+    height: 15px
+    border-radius: 100%
+    background: rgba(31, 32, 65, 0.25)
+
+#choiseButton__toogle--first,
+#choiseButton__toogle--second
+    margin: 0
+    padding: 0
+    width: 40px
+    height: 20px
+    opacity: 0
+
+.label__signIn--accaunt
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: #000000
+
+
+.registration__button--four 
+    position: absolute
+    width: 320px
+    height: 44px
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 22px
+
+.registration__button--four__label
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #FFFFFF
+
+.signIn__site 
+    top: 40px
+    display: flex
+
+.label__signIn--accaunt
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: #000000
+
+.enter__button
+    width: 99px
+    height: 44px
+    border-radius: 22px
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+.enter__button--bg
+    width: 95px
+    height: 40px
+    border-radius: 22px
+    background-color: #fff
 
 
 //************Five page***********
 .five__page--image
+    position: relative
     background-image: url("../img/bg_img.png")
     height: 1022px
     background-repeat: no-repeat
     background-size: cover
-    width: 100vw
-    margin-left: calc(-50vw + 50%)
+    @include allStringLine
+
+.label__fourPage
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 29px
+    color: #1F2041
+
+.four__email
+    padding-top: 12px
+    padding-left: 15px
+    width: 320px
+    height: 44px
+    top: 12px
+    left: 15px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.25)
+
+.four__password
+    margin-top: 40px
+    padding-top: 12px
+    padding-left: 15px
+    width: 320px
+    height: 44px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.25)
+
+.five__page--container 
+    position: absolute
+    top: 172px
+    left: 577px
+    width: 380px
+    height: 358px
+    background: #fff
+    border: 1px solid rgba(0, 0, 0, 0.12)
+    box-sizing: border-box
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+    border-radius: 4px
+
+.four__page--signIn__button img
+    width: 22px
+    height: 22px
+    padding-top: 8px
+
+
+
+.four__page--signIn__button 
+    margin-top: 20px
+    display: flex
+    width: 320px
+    height: 44px
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 22px
+
+.four__page--signIn__title
+    padding-left: 30px
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #FFFFFF
+
+.four__page--create__container
+    margin-top: 30px
+    display: flex
+
+.label__create
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: #000
+
+.create__button
+    position: relative
+    width: 99px
+    height: 44px
+    border-radius: 22px
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+
+.create__button--rect
+    position: absolute
+    top: 2px
+    left: 2px
+    width: 95px
+    height: 40px
+    border-radius: 22px
+    background: #fff
+
+.create__button--title 
+    margin: 0
+    padding: 0
+    position: absolute
+    font-family: 'Montserrat-ExtraBold'
+    font-style: normal
+    left: 18px
+    top: 14px
+    font-size: 12px
+    line-height: 15px
+    text-align: center
+    text-transform: uppercase
+    color: #BC9CFF
+
+.five__page--inside 
+    padding-left: 30px
+    

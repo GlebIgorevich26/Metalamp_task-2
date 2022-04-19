@@ -217,29 +217,29 @@ buttonNext.addEventListener('click', () => {
 
 
 //toogle section
-// const tooglfirst = document.querySelector('#choiseButton__toogle--first');
-// const toogleSecond = document.querySelector('#choiseButton__toogle--second');
-// const toogleSpan = document.querySelector('#choiseSpan__toogle');
-// const tooglediv = document.querySelector('.choiseButton__toogle');
+const tooglfirst = document.querySelector('#choiseButton__toogle--first');
+const toogleSecond = document.querySelector('#choiseButton__toogle--second');
+const toogleSpan = document.querySelector('#choiseSpan__toogle');
+const tooglediv = document.querySelector('.choiseButton__toogle');
 
 
-// toogleSecond.addEventListener('click', function() {
-//     if (toogleSecond.checked == true) {
-//         toogleSpan.style.left = '23px';
-//         tooglfirst.checked = false;
-//         tooglediv.style.border = '1px solid #BC9CFF';
-//         toogleSpan.style.background = 'linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)';
-//     };
-// });
+toogleSecond.addEventListener('click', function() {
+    if (toogleSecond.checked == true) {
+        toogleSpan.style.left = '23px';
+        tooglfirst.checked = false;
+        tooglediv.style.border = '1px solid #BC9CFF';
+        toogleSpan.style.background = 'linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)';
+    };
+});
 
-// tooglfirst.addEventListener('click', function() {
-//     if (tooglfirst.checked == true) {
-//         toogleSecond.checked = false;
-//         toogleSpan.style.left = '2px';
-//         tooglediv.style.border = '1px solid rgba(31, 32, 65, 0.25)';
-//         toogleSpan.style.background = 'rgba(31, 32, 65, 0.25)';
-//     };
-// });
+tooglfirst.addEventListener('click', function() {
+    if (tooglfirst.checked == true) {
+        toogleSecond.checked = false;
+        toogleSpan.style.left = '2px';
+        tooglediv.style.border = '1px solid rgba(31, 32, 65, 0.25)';
+        toogleSpan.style.background = 'rgba(31, 32, 65, 0.25)';
+    };
+});
 
 //like section
 const likediv = document.querySelector('.likeButton__choiseBox ');
@@ -259,20 +259,13 @@ likeCheckBox.addEventListener('click', function() {
     }
 });
 
-//section with apartment
-// let slyderContainer = document.querySelector('#listItems');
-// let rectangleImg = document.querySelectorAll('#rectangle');
-
-
-
-
-
 
 //***********apartment section*******
 let slyderContainer = document.querySelector('#listItems');
 let rectangleImg = document.querySelectorAll('#rectangle');
 
-
+let allListitems = document.querySelectorAll('#listitems');
+console.log(allListitems);
 
 const slyderDir = ['room', 'room1', 'room3'];
 const urlImage = "url(./img/slider/"

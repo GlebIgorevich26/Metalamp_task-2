@@ -35,7 +35,7 @@ html(lang="en")
         mixin footer
             .footer__container 
                 .footer__logo 
-                    img.header__logo(src="./img_website/logo.svg", alt="")
+                    img.footer__logo--img(src="./img_website/logo.svg", alt="")
                     p.heder__description Бронирование номеров в&nbsp;лучшем отеле 2019 года по&nbsp;версии ассоциации &laquo;Отельные взгляды&raquo;
                 .footer__list--container 
                     ul.footer__list
@@ -153,7 +153,7 @@ html(lang="en")
             .dropdownSectionGuests
                 p гости
                 button.dropdownSectionGuests__button
-                    .dropdownSectionGuests__button--text 3 Гостя
+                    .dropdownSectionGuests__button--text Сколько гостей
                     img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
                 .dropdownSectionGuests__sectionWithDropdownContent
                     .dropdownSectionGuests__sectionWithDropdownContent--item
@@ -193,13 +193,13 @@ html(lang="en")
                 p.arrival__title даты пребывания в отеле
                 //filter date dropdown
                 .filterDate 
-                    input.filterDate-item(type="text", name="", placeholder="23 августа - 24 августа")
+                    input.filterDate-item(type="text", name="", placeholder="23 авг - 24 авг")
                 //dropdown guests
                 .dropdownSectionGuests__second
                     h6.dropdownSectionGuests__second--title гости
-                    button.dropdownSectionGuests__button
-                        .dropdownSectionGuests__button--text 3 Гостя, 1 младенец
-                        img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
+                    button.dropdownSectionGuests__button--secondPage
+                        .dropdownSectionGuests__button--textSecond 3 Гостя, 1 младенец
+                        img.dropDown__button--iconSecond(src='./img_website/expand_more.svg', alt="")
                     .dropdownSectionGuests__sectionWithDropdownContent
                         .dropdownSectionGuests__sectionWithDropdownContent--item
                             p.dropdownSectionGuests__sectionWithDropdownContent--text взрослые
@@ -262,12 +262,12 @@ html(lang="en")
                             p На&nbsp;1&nbsp;этаже вас встретит специалист и&nbsp;проводит до&nbsp;номера.
                 
                 //facilities
-                .facilities__container
+                .facilities__container.facilities__comfort
                     p удобства номера 
                     //dropdown choise fild
                     .dropdownSection
-                        button.dropDown__button
-                            .dropDown__button--text 2 спальни 2 кровати
+                        button.dropDown__button.dropdownButton__bads
+                            .dropDown__button--text 2 спальни, 2 кровати
                             img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
                         .dropDown__sectionWithDropdownContent
                             .dropDown__sectionWithDropdownContent--item
@@ -376,10 +376,10 @@ html(lang="en")
         //header image 
         .header__image
             .header__img--container  
-                img(src="./img/header_img3.png", alt="")
-            .header__image--container 
-                img(src="./img/header_img.png", alt="")
-                img(src="./img/header_img2.png", alt="")
+                img.left__img(src="./img/header_img3.png", alt="")
+            .header__img--container__right 
+                img.right__top(src="./img/header_img.png", alt="")
+                img.right__bottom(src="./img/header_img2.png", alt="")
             
             
         //content container
@@ -392,7 +392,7 @@ html(lang="en")
                     .apart__intelligence
                         .apart__intelligence--descr 
                             p.apart__intelligence--title Сведения о номере 
-                            p.apart__intelligence--comments 2 отзыва
+                            
                         .apart__intelligence--item 
                             img(src="./img/insert_emoticon.svg", alt="")
                             .apart__intelligence--descr
@@ -411,27 +411,30 @@ html(lang="en")
 
                     .apart__impression 
                         p.apart__impression--title Впечатления от номера
-                        .apart__impression--rect 
-                            .rect__left 
-                            .rect__right
-                                .rect__right--top
-                                .rect__right--botton 
-                                span.top__span 
-                                span.right__span 
-                                span.bottom__span
-                            .rect__voise
-                                .rect__voise--descr 
-                                    p.rect__voise--number 260
-                                    p.rect__voise--voises голосов
+                        .apart__impression--info
+                            .apart__impression--rect 
+                                .rect__left 
+                                .rect__right
+                                    .rect__right--top
+                                    .rect__right--botton 
+                                    span.top__span 
+                                    span.right__span 
+                                    span.bottom__span
+                                .rect__voise
+                                    .rect__voise--descr 
+                                        p.rect__voise--number 260
+                                        p.rect__voise--voises голосов
 
-                        ul.apart__impression--list
-                            li.apart__impression--item Великолепно
-                            li.apart__impression--item Хорошо
-                            li.apart__impression--item Удовлетворительно
-                            li.apart__impression--item Разочарован
+                            ul.apart__impression--list
+                                li.apart__impression--item Великолепно
+                                li.apart__impression--item Хорошо
+                                li.apart__impression--item Удовлетворительно
+                                li.apart__impression--item Разочарован
 
-                .apart__review 
-                    .apart__review--title Отзывы посетителей номера
+                .apart__review
+                    .apart__rewiew--cont
+                        .apart__review--title Отзывы посетителей номера
+                        p.apart__review--comments 2 отзыва
                     
                     //comment section
                     .comment__container--general
@@ -447,7 +450,7 @@ html(lang="en")
                         //comment section
                         .comment__container 
                             .comment__container--header 
-                                img(src="./img_website/ava.png", alt="Avatar")
+                                img(src="./img_website/ava2.png", alt="Avatar")
                                 .commenter
                                     .commenter__name Патрисия Стёклышкова
                                     .commenter__commitDate Неделю назад
@@ -527,6 +530,50 @@ html(lang="en")
         //header
         +header 
         .four__page--image
+            .registration__form--container
+                .registration__form
+                    .registration__form--title Регистрация аккаунта
+                    .name__input
+                        p.name__input--placeholder Имя
+
+                    .surname__input
+                        p.surname__input--placeholder Фамилия
+
+                    //radio cohise button men women
+                    .choiceRadioItems
+                        .choiceRadioItem__item
+                            input#men.custom__radiobutton(type="radio")
+                            label(for="men") Мужчина
+                        .choiceRadioItem__item
+                            input#women.custom__radiobutton(type="radio")
+                            label(for="women") Женщина
+                    p.label__birthday дата рождения
+                    .birthday__input 
+                        p.birthday__input--placeholder ДД.ММ.ГГ
+                    p.label__signIn данные для входа в сервис
+                    //email input element 
+                    .email__Input--four 
+                        p.email__Input--placeholder Email
+
+                    .password__input--four 
+                        p.password__input--placeholder Пароль
+                    //choise toogle
+                    .choise__toogle
+                        .choiseButton__toogle
+                            input#choiseButton__toogle--first(type="checkbox")
+                            label(for="choiseButton__toogle--first") 
+                            input#choiseButton__toogle--second(type="checkbox")
+                            label(for="choiseButton__toogle--first")
+                            span#choiseSpan__toogle
+                        p.label__choise--toogle получать специальные предложения
+                    .registration__button--four 
+                        p.registration__button--four__label зарегестрироваться
+                        img(src="./img_website/arrow_forward.svg", alt="")
+                    .signIn__site 
+                        p.label__signIn--accaunt Уже есть аккаунт на Toxin 
+                        .enter__button
+                            .enter__button--bg
+                            p.enter__button--title войти
         //footer
         +footer
 
@@ -535,7 +582,23 @@ html(lang="en")
         //header
         +header
         .five__page--image
+        
+            .five__page--container
+                .five__page--inside 
+                    p.label__fourPage Войти
+                    .four__email Email
+                    .four__password Пароль
+                    .four__page--signIn__button 
+                        p.four__page--signIn__title войти
+                        img(src="./img_website/arrow_forward.svg", alt="")
+                    .four__page--create__container 
+                        p.label__create Нет аккаунта на Toxin?
+                        .create__button
+                            .create__button--rect
+                            p.create__button--title создать
 
+
+        
         //footer
         +footer
     script(src="./js/jquery.js") 
