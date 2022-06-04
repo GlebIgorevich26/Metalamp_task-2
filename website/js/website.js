@@ -19,6 +19,21 @@
 //     }
 // });
 
+//burger menu
+const burgerCont = document.querySelector('#burger');
+const burgerSpanfirst = document.querySelector('.burger__line--first');
+const burgerSpanSecond = document.querySelector('.burger__line--second');
+const burgerSpanThird = document.querySelector('.burger__line--third');
+
+burgerCont.addEventListener('click', openBurger);
+
+function openBurger() {
+    burgerSpanSecond.style.display = 'none';
+    burgerSpanfirst.style.marginTop = '7px';
+    burgerSpanfirst.style.transform = 'rotate(0.35turn)';
+    burgerSpanThird.style.transform = 'rotate(0.15turn)';
+    burgerSpanThird.style.marginTop = '-9px';
+}
 
 //Dropdown content for section choise sum of beds, bathrooms 
 let count = 0;
@@ -302,3 +317,11 @@ function prevclickButton(){
     document.querySelector('.prev__img').disabled = true;
   }
 }
+
+
+
+
+
+
+
+

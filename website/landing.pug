@@ -3,7 +3,8 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(name="MobileOptimized", content="width")
         link(rel="stylesheet", href="css/air-datepicker.css")
         link(rel="stylesheet", href="css/normalize.css")
         link(rel="stylesheet", href="css/nouislider.css")
@@ -12,9 +13,19 @@ html(lang="en")
     body 
 
         //**********Mixins*****************
+        //mixin burger menu
+        mixin burger
+            .burger__container
+                .header__burger--container#burger
+                    .header__burger__line
+                        span.burger__line--first 
+                        span.burger__line--second 
+                        span.burger__line--third 
+        
         //mixin header
         mixin header
             .header__container--general
+                +burger
                 .header__container 
                     img.header__logo(src="./img_website/logo.svg", alt="")
                     .header__list--container
@@ -30,7 +41,10 @@ html(lang="en")
                         .signIn__button 
                             p войти
                     .registration__button 
-                        p зарегестрироваться 
+                        p зарегестрироваться
+                
+
+
         //mixin footer
         mixin footer
             .footer__container 
@@ -128,6 +142,8 @@ html(lang="en")
         //Header without person
         
         +header
+        
+        
         //image container with background image
         .container__img 
         
@@ -154,7 +170,7 @@ html(lang="en")
                 p гости
                 button.dropdownSectionGuests__button
                     .dropdownSectionGuests__button--text Сколько гостей
-                    img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
+                    img.dropDown__button--icon.drop__icon--mr(src='./img_website/expand_more.svg', alt="")
                 .dropdownSectionGuests__sectionWithDropdownContent
                     .dropdownSectionGuests__sectionWithDropdownContent--item
                         p.dropdownSectionGuests__sectionWithDropdownContent--text взрослые
@@ -186,7 +202,6 @@ html(lang="en")
         +delimiter
         //Header without person
         +header
-
         //content container
         .conteiner__general
             .container__nav--left 
@@ -398,7 +413,7 @@ html(lang="en")
                             .apart__intelligence--descr
                                 p.descr__title Комфорт
                                 p.descr__subscribe Шумопоглащающие стены
-                        .apart__intelligence--item 
+                        .apart__intelligence--item.apart__intel--border 
                             img(src="./img/location_city.svg", alt="")
                             .apart__intelligence--descr
                                 p.descr__title Удобство
@@ -500,7 +515,7 @@ html(lang="en")
                         //dropdown guests
                         .dropdownSectionGuests
                             p гости
-                            button.dropdownSectionGuests__button
+                            button.dropdownSectionGuests__button.drop__guest--mr 
                                 .dropdownSectionGuests__button--text 3 Гостя
                                 img.dropDown__button--icon(src='./img_website/expand_more.svg', alt="")
                             .dropdownSectionGuests__sectionWithDropdownContent
@@ -529,11 +544,13 @@ html(lang="en")
                             .apart__cost--sum 39 960₽
                         .apartment__discount
                             .apart__disc--day Сбор за услуги: скидка 2 179₽
-                            .apart__disc--rect i 
+                            .apart__disc--rect 
+                                p i 
                             .apart__disc--sum 0₽
                         .apart__services
-                            .apart__servicesc--day Сбор за услуги: скидка 2 179₽
-                            .apart__services--rect i 
+                            .apart__servicesc--day Сбор за дополнительные услуги
+                            .apart__services--rect 
+                                p i 
                             .apart__services--sum 300₽
                     .apart__sum 
                         .apart__sum--title Итого
@@ -580,13 +597,14 @@ html(lang="en")
                         p.password__input--placeholder Пароль
                     //choise toogle
                     .choise__toogle
-                        .choiseButton__toogle
-                            input#choiseButton__toogle--first(type="checkbox")
-                            label(for="choiseButton__toogle--first") 
-                            input#choiseButton__toogle--second(type="checkbox")
-                            label(for="choiseButton__toogle--first")
-                            span#choiseSpan__toogle
-                        p.label__choise--toogle получать специальные предложения
+                        .choise__tog
+                            .choiseButton__toogle
+                                input#choiseButton__toogle--first(type="checkbox")
+                                label(for="choiseButton__toogle--first") 
+                                input#choiseButton__toogle--second(type="checkbox")
+                                label(for="choiseButton__toogle--first")
+                                span#choiseSpan__toogle
+                            p.label__choise--toogle Получать спец предложения
                     .registration__button--four 
                         p.registration__button--four__label зарегестрироваться
                         img(src="./img_website/arrow_forward.svg", alt="")
