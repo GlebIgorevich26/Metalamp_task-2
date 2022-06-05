@@ -1,0 +1,289 @@
+list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.findNumbers {
+  height: 374px;
+  width: 380px;
+  color: fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.fimdNumbers__title {
+  font-family: Montserrat-ExtraBold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+}
+
+.findNumbers__subtitle--arrival,
+.findNumbers__subtitle--departure,
+.findNumbers__guests--subtitle,
+.pricingNumber__aboutOrder__guests--subtitle,
+.pricingNumber__aboutOrder--subtitle {
+  width: 83px;
+  height: 15px;
+  font-family: Montserrat-ExtraBold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+
+.findNumbers__calendar,
+.pricingNumber__aboutOrder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#start,
+#stop {
+  width: 150px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.findNumbers__guests--select,
+.findNumbers__aboutOrder__guests--select {
+  width: 320px;
+  height: 44px;
+  background: #FFFFFF;
+  /* Dark 25% */
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.findNumbers__button,
+.findNumbers__aboutOrder__guests--button,
+.submitForm__button {
+  width: 320px;
+  height: 44px;
+  text-transform: uppercase;
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  /* identical to box height */
+  text-align: center;
+  /* Primary Gradient */
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+}
+
+.findNumbers__button .findNumbers__button--img,
+.findNumbers__aboutOrder__guests--button .findNumbers__button--img,
+.submitForm__button .findNumbers__button--img {
+  width: 20px;
+  height: 20px;
+  padding-left: 90%;
+}
+
+.pricingNumber__header,
+.pricingNumbers__tableSum,
+.pricingNumbers__tableCllection,
+.pricingNumbers__tableColleclionDop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pricingNumber__numberOfticket {
+  border: 1px solid black;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.pricingNumber__pricing {
+  border: 1px solid black;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.pricingNumber {
+  margin-top: 100px;
+  height: 512px;
+  width: 380px;
+  color: fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.submitForm {
+  margin-top: 100px;
+  height: 358px;
+  width: 380px;
+  color: fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.submitForm__title {
+  width: 320px;
+  height: 30px;
+  font-family: Montserrat-Regular;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+}
+
+.submitForm__email,
+.submitForm__passwpord {
+  width: 320px;
+  height: 44px;
+  background: #fff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.submitForm__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.submitForm__footer--subtitle {
+  width: 164px;
+  height: 18px;
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.submitForm__footer--button {
+  width: 62px;
+  height: 15px;
+  font-family: Montserrat-Regular;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  width: 99px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #fff;
+  border-color: #BC9CFF;
+}
+
+#com {
+  width: 200px;
+  height: 200px;
+  color: white;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#com:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#com:before:focus {
+  color: black;
+  width: 400px;
+}
+
+.registrationForm_switchForjoinButton .registrationForm_switchSlider {
+  background-color: #2196F3;
+}
+
+.registrationForm_switchForjoinButton .registrationForm_switchSlider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+.registrationForm_switchForjoinButton:chacked + .registrationForm_switchSlider::before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.registrationForm_switchSlider {
+  border-radius: 34px;
+}
+
+.registrationForm_switchSlider:before {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */
